@@ -1,0 +1,12 @@
+﻿@model Sitecore.Feature.Blog.Areas.Blog.Models.OpenGraphMetadataViewModel
+
+@if (!Sitecore.Context.PageMode.IsExperienceEditorEditing)
+{
+    <text>        
+        <meta property="og:url" content="@Html.Raw(Model.Url)" />
+        <meta property="og:title" content="@Html.Raw(Model.Title)" />
+        <meta property="og:description" content="@Html.Raw(Model.Description)" />
+        <meta property="og:type" content="@Model.Type" />
+        <meta property="og:image" content="@Html.Raw(@Model.ImageUrl)" />
+    </text>
+}

@@ -1,0 +1,73 @@
+----item----
+version: 1
+id: {B6248F06-9ED3-400C-B6F8-A14D5E5E122F}
+database: master
+path: /sitecore/templates/Feature/Blog/Blog Tag/__Standard Values
+parent: {B05C5F99-615B-46E4-A0F0-FB43E62C404F}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {B05C5F99-615B-46E4-A0F0-FB43E62C404F}
+templatekey: Blog Tag
+created: 20170103T203021Z
+
+----field----
+field: {C9283D9E-7C29-4419-9C28-5A5C8FF53E84}
+name: __Bucketable
+key: __bucketable
+content-length: 1
+
+1
+----version----
+language: en
+version: 1
+revision: 961bdb2b-44da-43a2-a0c0-5402ec0de9a4
+
+----field----
+field: {94009472-3730-4F62-A8C7-3750BAF1D57B}
+name: Blog Tag
+key: blog tag
+content-length: 5
+
+$name
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170103T203021Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+961bdb2b-44da-43a2-a0c0-5402ec0de9a4
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170103T205219Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

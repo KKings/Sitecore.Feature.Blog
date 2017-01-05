@@ -10,7 +10,7 @@ module.exports = () => {
         licensePath: sandbox + "\\Data\\license.xml",
         solutionName: "Sitecore.Feature.Blog",
         buildConfiguration: "Debug",
-        runCleanBuilds: true
+        runCleanBuilds: false
     };
 
     return config;

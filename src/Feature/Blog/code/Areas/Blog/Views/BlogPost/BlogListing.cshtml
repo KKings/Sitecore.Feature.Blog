@@ -1,0 +1,18 @@
+﻿@model Sitecore.Feature.Blog.Areas.Blog.Models.BlogListingViewModel
+
+<div class="post-listing">
+    @foreach (var item in Model.Blogs)
+    {
+        <text>
+            <div class="post">
+                <a href="@item.Url">
+                    <h1>@item.PostTitle</h1>
+                </a>
+                <div class="post-metadata">@item.PublishDate</div>
+                <div class="post-summary">
+                    @item.Summary
+                </div>
+            </div>
+        </text>
+    }
+</div>
