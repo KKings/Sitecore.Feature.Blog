@@ -1,1 +1,20 @@
-﻿@model dynamic
+﻿@model Sitecore.Feature.Blog.Areas.Blog.Models.TagsListingViewModel
+    
+@if (Model != null && Model.Tags.Any())
+{
+    <text>
+        <div class="widget widget-tags">
+            <h2>@Model.Title</h2>
+            <ul>
+                @foreach (var tag in Model.Tags)
+                {
+                    <text>
+                        <li class="tag-item tag-@tag.Part2">
+                            <a href="@tag.Part1">@tag.Part2</a>
+                        </li>
+                    </text>
+                }
+            </ul>
+        </div>
+    </text>
+}

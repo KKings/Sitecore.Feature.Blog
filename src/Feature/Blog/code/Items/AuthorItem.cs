@@ -27,6 +27,11 @@ namespace Sitecore.Feature.Blog.Items
         }
 
         /// <summary>
+        /// Gets the Item Url
+        /// </summary>
+        public string Url => this.InnerItem.ItemUrl();
+
+        /// <summary>
         /// Gets the Author Title
         /// </summary>
         public string FullName => this.InnerItem[BlogAuthor.FullNameFieldId];

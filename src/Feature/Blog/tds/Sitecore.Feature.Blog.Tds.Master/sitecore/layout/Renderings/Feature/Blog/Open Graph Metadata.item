@@ -1,0 +1,87 @@
+----item----
+version: 1
+id: {44B79B8C-00CE-40D4-96D4-5DBEE3D84472}
+database: master
+path: /sitecore/layout/Renderings/Feature/Blog/Open Graph Metadata
+parent: {831B25AD-0C2C-4778-9447-08F8A0CFDD77}
+name: Open Graph Metadata
+master: {00000000-0000-0000-0000-000000000000}
+template: {2A3E91A0-7987-44B5-AB34-35C2D9DE83B9}
+templatekey: Controller rendering
+created: 20170104T152105Z
+
+----field----
+field: {E64AD073-DFCC-4D20-8C0B-FE5AA6226CD7}
+name: Controller
+key: controller
+content-length: 86
+
+Sitecore.Feature.Blog.Areas.Blog.Controllers.MetadataController, Sitecore.Feature.Blog
+----field----
+field: {DED9E431-3604-4921-A4B3-A6EC7636A5B6}
+name: Controller Action
+key: controller action
+content-length: 17
+
+OpenGraphMetadata
+----field----
+field: {FC5C3451-DFDE-4778-9901-5D0B1DA1E212}
+name: Area
+key: area
+content-length: 4
+
+Blog
+----field----
+field: {308E88F5-CD6E-4F8F-BAFE-95A47DEDEFDC}
+name: Editable
+key: editable
+content-length: 0
+
+
+----version----
+language: en
+version: 1
+revision: faaaaaa5-06e7-41a9-8524-204775d5a032
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170104T152105Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+faaaaaa5-06e7-41a9-8524-204775d5a032
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170104T153438Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

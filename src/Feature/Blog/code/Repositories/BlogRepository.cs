@@ -3,7 +3,9 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Linq.Expressions;
     using ContentSearch.Linq;
+    using ContentSearch.SearchTypes;
     using Data;
     using Domain;
     using Providers;
@@ -24,7 +26,7 @@
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public IBlog Get(ID id)
+        public virtual IBlog Get(ID id)
         {
             var queryable = this.GetQueryable<BlogSearchResultItem>();
 
@@ -38,24 +40,56 @@
             return results.Hits.Any() ? results.Hits.First().Document : null;
         }
 
-        public IBlog Get(string slug)
+        public virtual IBlog Get(string slug)
         {
-            throw new NotImplementedException();
+            var queryable = this.GetQueryable<BlogSearchResultItem>();
+
+            queryable = queryable.Where(result => result.Name == slug)
+                                 .Where(result => result.TemplateId == BlogPost.TemplateId);
+
+            queryable = queryable.Take(1);
+
+            var results = this.GetResults(queryable);
+
+            return results.Hits.Any() ? results.Hits.First().Document : null;
         }
 
-        public IEnumerable<IBlog> All()
+        public virtual IEnumerable<BlogSearchResultItem> All(Expression<Func<BlogSearchResultItem, object>> sorting = null, bool descending = false)
         {
             var queryable = this.GetQueryable<BlogSearchResultItem>();
 
             queryable = queryable.Where(result => result.TemplateId == BlogPost.TemplateId)
                                  .Where(result => result.Name != "__Standard Values");
-            
+
+            if (sorting != null)
+            {
+                queryable = descending ? queryable.OrderByDescending(sorting) : queryable.OrderBy(sorting);
+            }
+
             var results = this.GetResults(queryable);
 
             return results.Hits.Select(m => m.Document);
         }
 
-        public IEnumerable<IBlog> Related(IBlog blog)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public virtual FacetResults Archives()
+        {
+            var queryable = this.GetQueryable<BlogSearchResultItem>();
+
+            queryable = queryable.Where(result => result.TemplateId == BlogPost.TemplateId)
+                                 .Where(result => result.Name != "__Standard Values");
+
+            queryable = queryable.FacetOn(m => m.ArchiveMonth);
+
+            var results = this.GetFacetResults(queryable);
+
+            return results;
+        }
+
+        public virtual IEnumerable<BlogSearchResultItem> Related(IBlog blog)
         {
             throw new NotImplementedException();
         }

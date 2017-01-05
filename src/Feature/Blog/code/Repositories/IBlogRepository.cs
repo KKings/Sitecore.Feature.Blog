@@ -1,9 +1,13 @@
 ﻿
 namespace Sitecore.Feature.Blog.Repositories
 {
+    using System;
     using System.Collections.Generic;
+    using System.Linq.Expressions;
+    using ContentSearch.Linq;
     using Data;
     using Domain;
+    using Search;
 
     public interface IBlogRepository
     {
@@ -11,8 +15,10 @@ namespace Sitecore.Feature.Blog.Repositories
 
         IBlog Get(string slug);
 
-        IEnumerable<IBlog> All();
+        IEnumerable<BlogSearchResultItem> All(Expression<Func<BlogSearchResultItem, object>> sorting, bool descending);
 
-        IEnumerable<IBlog> Related(IBlog blog);
+        FacetResults Archives();
+
+        IEnumerable<BlogSearchResultItem> Related(IBlog blog);
     }
 }

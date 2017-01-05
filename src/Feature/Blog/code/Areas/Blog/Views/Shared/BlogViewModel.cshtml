@@ -1,0 +1,61 @@
+﻿@model Sitecore.Feature.Blog.Areas.Blog.Models.BlogViewModel
+
+@if (Model != null)
+{
+    <text>
+        <article class="post">
+            <header class="entry-header">
+                <h2 class="entry-title">
+                    <a href="@Model.Url">
+                        @Model.PostTitle
+                    </a>
+                </h2>
+            </header>
+            <div class="entry-summary">@Html.Raw(Model.Summary)</div>
+            @if (Model.Thumbnail != null)
+            {
+                <a class="post-thumbnail" href="@Model.Url">
+                    <img src="@Model.Thumbnail.Src" />
+                </a>
+            }
+            <div class="entry-content">@Html.Raw(Model.Body)</div>
+            <footer class="entry-footer">
+                @if (Model.Authors.Any())
+                {
+                    <span class="byline">
+                        @foreach (var author in Model.Authors)
+                        {
+                            <a href="@author.Url">@author.Fullname</a>
+                        }
+                    </span>
+                }
+                <span class="posted-on">
+                    <span class="screen-reader-text">Posted On </span>
+                    <a href="@Model.Url">
+                        <time class="entry-date published">@Model.PublishDate.ToString("MMMM dd, yyyy")</time>
+                    </a>
+                </span>
+                @if (Model.Categories.Any())
+                {
+                    <span class="cat-links">
+                        <span class="screen-reader-text">Categories </span>
+                        @foreach (var category in Model.Categories)
+                        {
+                            <a href="@category.Url">@category.Name</a>
+                        }
+                    </span>
+                }
+                @if (Model.Tags.Any())
+                {
+                    <span class="tag-links">
+                        <span class="screen-reader-text">Tags </span>
+                        @foreach (var tag in Model.Tags)
+                        {
+                            <a href="@tag.Url">@tag.Name</a>
+                        }
+                    </span>
+                }
+            </footer>
+        </article>
+    </text>
+}

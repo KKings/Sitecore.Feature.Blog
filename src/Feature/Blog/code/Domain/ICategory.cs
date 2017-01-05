@@ -2,6 +2,6 @@
 {
     public interface ICategory
     {
-        string Name { get; }
+        string CategoryName { get; }
     }
 }

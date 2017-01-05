@@ -168,6 +168,7 @@
     <Content Include="Areas\Blog\Views\BlogPost\BlogPostCategories.cshtml" />
     <Content Include="Areas\Blog\Views\BlogPost\BlogPostRelatedPosts.cshtml" />
     <Content Include="Areas\Blog\Views\BlogPost\BlogTagsListing.cshtml" />
+    <Content Include="Areas\Blog\Views\Shared\BlogViewModel.cshtml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
@@ -175,18 +176,30 @@
     <Compile Include="Areas\Blog\BlogAreaRegistration.cs" />
     <Compile Include="Areas\Blog\Controllers\BlogPostController.cs" />
     <Compile Include="Areas\Blog\Controllers\MetadataController.cs" />
+    <Compile Include="Areas\Blog\Models\ArchivesListingViewModel.cs" />
+    <Compile Include="Areas\Blog\Models\ArchiveViewModel.cs" />
+    <Compile Include="Areas\Blog\Models\AuthorViewModel.cs" />
     <Compile Include="Areas\Blog\Models\BlogListingViewModel.cs" />
     <Compile Include="Areas\Blog\Models\BlogPostDetailViewModel.cs" />
+    <Compile Include="Areas\Blog\Models\BlogViewModel.cs" />
+    <Compile Include="Areas\Blog\Models\CategoryListingViewModel.cs" />
+    <Compile Include="Areas\Blog\Models\CategoryViewModel.cs" />
     <Compile Include="Areas\Blog\Models\OpenGraphMetadataViewModel.cs" />
+    <Compile Include="Areas\Blog\Models\TagsListingViewModel.cs" />
+    <Compile Include="Areas\Blog\Models\TagViewModel.cs" />
+    <Compile Include="Domain\Archive.cs" />
     <Compile Include="Domain\IAuthor.cs" />
     <Compile Include="Domain\IBlog.cs" />
     <Compile Include="Domain\ICategory.cs" />
     <Compile Include="Domain\ITag.cs" />
     <Compile Include="Extensions\ItemExtensions.cs" />
     <Compile Include="Extensions\ServiceCollectionExtensions.cs" />
+    <Compile Include="Extensions\TemplateExtensions.cs" />
     <Compile Include="Items\AuthorItem.cs" />
     <Compile Include="Items\BlogPostItem.cs" />
     <Compile Include="Items\ImageMedia.cs" />
+    <Compile Include="Items\CategoryItem.cs" />
+    <Compile Include="Items\TagItem.cs" />
     <Compile Include="Models.Generated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\DefaultDatabaseProvider.cs" />
@@ -194,11 +207,25 @@
     <Compile Include="Providers\IDatabaseProvider.cs" />
     <Compile Include="RegisterDependencies.cs" />
     <Compile Include="Repositories\BlogRepository.cs" />
+    <Compile Include="Repositories\CategoryRepository.cs" />
     <Compile Include="Repositories\ContentSearchRepository.cs" />
     <Compile Include="Repositories\IBlogRepository.cs" />
     <Compile Include="Providers\IIndexProvider.cs" />
+    <Compile Include="Repositories\ICategoryRepository.cs" />
     <Compile Include="Repositories\IResultRepository.cs" />
+    <Compile Include="Repositories\ITagRepository.cs" />
+    <Compile Include="Repositories\TagRepository.cs" />
     <Compile Include="Search\BlogSearchResultItem.cs" />
+    <Compile Include="Search\CategorySearchResultItem.cs" />
+    <Compile Include="Search\ComputedFields\BlogArchiveMonth.cs" />
+    <Compile Include="Search\ComputedFields\BlogArchiveYear.cs" />
+    <Compile Include="Search\ComputedFields\BlogAuthorNames.cs" />
+    <Compile Include="Search\ComputedFields\BlogTagNames.cs" />
+    <Compile Include="Search\TagSearchResultItem.cs" />
+    <Compile Include="Services\BlogService.cs" />
+    <Compile Include="Services\IBlogService.cs" />
+    <Compile Include="Services\IRenderingService.cs" />
+    <Compile Include="Services\RenderingService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -210,9 +237,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

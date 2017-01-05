@@ -1,1 +1,20 @@
-﻿@model dynamic
+﻿@model Sitecore.Feature.Blog.Areas.Blog.Models.ArchivesListingViewModel
+
+@if (Model != null && Model.Archives.Any())
+{
+    <text>
+        <div class="widget widget-archives">
+            <h2>@Model.Title</h2>
+            <ul>
+                @foreach (var archive in Model.Archives)
+                {
+                    <text>
+                        <li>
+                            <a href="@archive.Url">@archive.Title</a>
+                        </li>
+                    </text>
+                }
+            </ul>
+        </div>
+    </text>
+}

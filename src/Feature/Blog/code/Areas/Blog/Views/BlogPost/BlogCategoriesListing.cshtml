@@ -1,2 +1,20 @@
-﻿@model dynamic
+﻿@model Sitecore.Feature.Blog.Areas.Blog.Models.CategoryListingViewModel
 
+@if (Model != null && Model.Categories.Any())
+{
+    <text>
+        <div class="widget widget-categories">
+            <h2>@Model.Title</h2>
+            <ul>
+                @foreach (var tag in Model.Categories)
+                {
+                    <text>
+                        <li class="cat-item cat-@tag.Part2">
+                            <a href="@tag.Part1">@tag.Part2</a>
+                        </li>
+                    </text>
+                }
+            </ul>
+        </div>
+    </text>
+}

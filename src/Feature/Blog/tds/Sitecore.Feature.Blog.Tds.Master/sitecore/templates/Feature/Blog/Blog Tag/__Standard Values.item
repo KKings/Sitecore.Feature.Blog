@@ -24,8 +24,8 @@ revision: 961bdb2b-44da-43a2-a0c0-5402ec0de9a4
 
 ----field----
 field: {94009472-3730-4F62-A8C7-3750BAF1D57B}
-name: Blog Tag
-key: blog tag
+name: Tag Name
+key: tag name
 content-length: 5
 
 $name

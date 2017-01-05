@@ -18,6 +18,13 @@ content-length: 21
 
 Multilist with Search
 ----field----
+field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
+name: Source
+key: source
+content-length: 136
+
+StartSearchLocation=query:./ancestor-or-self::*[@@templateid -> '{E58B747B-D2D4-4DB9-A535-0DEC41BC4F2A}']&Filter=+_templatename:blog tag
+----field----
 field: {BE351A73-FCB0-4213-93FA-C302D8AB4F51}
 name: Shared
 key: shared
@@ -34,7 +41,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 9f5a744a-8dc3-4a5b-aeba-1f1d78e52a12
+revision: a1de1eee-73b2-4d9e-8ea9-8588f85e3cf3
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9f5a744a-8dc3-4a5b-aeba-1f1d78e52a12
+a1de1eee-73b2-4d9e-8ea9-8588f85e3cf3
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170103T203942Z
+20170105T174003Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

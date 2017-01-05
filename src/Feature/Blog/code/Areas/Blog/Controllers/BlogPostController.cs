@@ -1,66 +1,97 @@
 ﻿namespace Sitecore.Feature.Blog.Areas.Blog.Controllers
 {
+    using System;
+    using System.Linq;
     using System.Web.Mvc;
+    using Collections;
     using Items;
     using Models;
     using Mvc.Controllers;
     using Repositories;
+    using Services;
 
     public class BlogPostController : Controller
     {
-        private readonly IBlogRepository blogRepository;
+        private readonly IBlogService blogService;
+        private readonly ITagRepository tagRepository;
+        private readonly ICategoryRepository categoryRepository;
+        private readonly IRenderingService renderingService;
 
-        public BlogPostController(IBlogRepository blogRepository)
+        public BlogPostController(IBlogService blogService, 
+            ITagRepository tagRepository, 
+            ICategoryRepository categoryRepository,
+            IRenderingService renderingService)
         {
-            this.blogRepository = blogRepository;
+            this.blogService = blogService;
+            this.tagRepository = tagRepository;
+            this.categoryRepository = categoryRepository;
+            this.renderingService = renderingService;
         }
 
-        public ActionResult BlogPostDetail()
+        public virtual ActionResult BlogPostDetail()
         {
             var blogPost = (BlogPostItem)Mvc.Presentation.RenderingContext.Current.ContextItem;
 
-            var viewModel = new BlogPostDetailViewModel
-            {
-                Title   = blogPost.Title, 
-                Body    = blogPost.Body
-            };
+            return this.View("~/areas/blog/views/shared/BlogViewModel.cshtml",(BlogViewModel)blogPost);
+        }
+
+        public virtual ActionResult BlogPostCategories()
+        {
+            return this.View();
+        }
+
+
+        public virtual ActionResult BlogPostRelatedPosts()
+        {
+            return this.View();
+        }
+
+        public virtual ActionResult BlogArchivesListing()
+        {
+            var title = this.renderingService.GetTitle(Mvc.Presentation.RenderingContext.CurrentOrNull);
+            var archives = this.blogService.Archives();
+
+            var viewModel = new ArchivesListingViewModel(
+                title: title,
+                archives: archives.Select(result => new ArchiveViewModel
+                {
+                    Title = result.Title,
+                    Url = result.Url
+                }));
 
             return this.View(viewModel);
         }
 
-        public ActionResult BlogPostCategories()
+        public virtual ActionResult BlogListing()
         {
-            return this.View();
-        }
+            var posts = this.blogService.All();
 
-
-        public ActionResult BlogPostRelatedPosts()
-        {
-            return this.View();
-        }
-
-        public ActionResult BlogArchivesListing()
-        {
-            return this.View();
-        }
-
-        public ActionResult BlogListing()
-        {
-            var blogs = this.blogRepository.All();
-
-            var viewModel = new BlogListingViewModel(blogs);
+            var viewModel = new BlogListingViewModel(posts.Select(post => (BlogViewModel)post));
 
             return this.View(viewModel);
         }
 
-        public ActionResult BlogTagsListing()
+        public virtual ActionResult BlogTagsListing()
         {
-            return this.View();
+            var title = this.renderingService.GetTitle(Mvc.Presentation.RenderingContext.CurrentOrNull);
+            var tags = this.tagRepository.All();
+            var viewModel = new TagsListingViewModel(
+                title: title, 
+                tags: tags.Select(tag => new Pair<string, string>($"/tags/{tag.TagName}", tag.TagName)));
+
+            return this.View(viewModel);
         }
 
-        public ActionResult BlogCategoriesListing()
+        public virtual ActionResult BlogCategoriesListing()
         {
-            return this.View();
+            var title = this.renderingService.GetTitle(Mvc.Presentation.RenderingContext.CurrentOrNull);
+            var categories = this.categoryRepository.All();
+
+            var viewModel = new CategoryListingViewModel(
+                title: title,
+                categories: categories.Select(cat => new Pair<string, string>($"/category/{cat.CategoryName}", cat.CategoryName)));
+
+            return this.View(viewModel);
         }
     }
 }

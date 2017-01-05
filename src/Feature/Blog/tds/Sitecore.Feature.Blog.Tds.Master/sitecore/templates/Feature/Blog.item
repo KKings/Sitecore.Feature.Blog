@@ -11,6 +11,13 @@ templatekey: Template Folder
 created: 20170103T193926Z
 
 ----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 29
+
+Applications/16x16/folder.png
+----field----
 field: {6FD695E7-7F6D-4CA5-8B49-A829E5950AE9}
 name: __Subitems Sorting
 key: __subitems sorting
@@ -20,7 +27,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 82ef2bea-7f1c-4bc5-a7bb-425744cfe955
+revision: 003e6a98-c1e8-4d9e-a27a-b523f8f8f451
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-82ef2bea-7f1c-4bc5-a7bb-425744cfe955
+003e6a98-c1e8-4d9e-a27a-b523f8f8f451
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170103T202049Z
+20170105T190529Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
