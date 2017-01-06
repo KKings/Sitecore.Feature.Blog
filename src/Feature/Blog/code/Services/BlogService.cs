@@ -8,19 +8,29 @@ namespace Sitecore.Feature.Blog.Services
     using Domain;
     using Items;
     using Repositories;
+    using Search;
 
     public class BlogService : IBlogService
     {
-        private readonly IBlogRepository repository;
+        private readonly IBlogRepository<BlogSearchResultItem> repository;
 
-        public BlogService(IBlogRepository repository)
+        public BlogService(IBlogRepository<BlogSearchResultItem> repository)
         {
             this.repository = repository;
         }
 
         public virtual IEnumerable<BlogPostItem> All()
         {
-            var posts = this.repository.All(m => m.PublishDate, true);
+            var query = new SearchQuery<BlogSearchResultItem>
+            {
+                Sorts = new[]
+                {
+                    new SortExpression<BlogSearchResultItem>(result => result.PublishDate,
+                        SortExpression<BlogSearchResultItem>.Sorting.Descending),
+                }
+            };
+
+            var posts = this.repository.Query(query);
 
             return posts.Select(post => (BlogPostItem)post.GetItem());
         }
@@ -49,6 +59,30 @@ namespace Sitecore.Feature.Blog.Services
                                   Url = $"/{separated[1]}/{separated[0]}"
                               };
                           });
+        }
+
+        public IEnumerable<BlogPostItem> Related(BlogPostItem postItem)
+        {
+            var query = new SearchQuery<BlogSearchResultItem>
+            {
+                Queries = new ExpressionBuilder<BlogSearchResultItem>()
+                    .Where(m => m.ItemId != postItem.ID)
+                    .And(and => and
+                        .IfAny(postItem.Tags.Any(), postItem.Tags.Select(item => item.ID), (result, id) => result.Tags.Contains(id))
+                        .IfOrAny(postItem.Categories.Any(), postItem.Categories.Select(item => item.ID),
+                        (result, id) => result.Categories.Contains(id)))
+                    .Build(),
+                Paging = new Paging
+                {
+                    Display = 4
+                }
+            };
+
+            var posts = this.repository.Query(query);
+
+            var items = posts as BlogSearchResultItem[] ?? posts.ToArray();
+
+            return !items.Any() ? new BlogPostItem[0] : items.Select(post => (BlogPostItem)post.GetItem());
         }
 
         /// <summary>

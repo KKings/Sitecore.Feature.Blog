@@ -9,5 +9,7 @@ namespace Sitecore.Feature.Blog.Services
         IEnumerable<BlogPostItem> All();
 
         IEnumerable<Archive> Archives();
+
+        IEnumerable<BlogPostItem> Related(BlogPostItem blog);
     }
 }

@@ -8,13 +8,13 @@
     using Search;
     using Sitecore.Feature.Blog.Feature.Blog;
 
-    public class CategoryRepository : ContentSearchRepository, ICategoryRepository
+    public class CategoryRepository : ContentSearchRepository<CategorySearchResultItem>, ICategoryRepository
     {
         public CategoryRepository(IIndexProvider indexProvider) : base(indexProvider) { }
 
         public IEnumerable<ICategory> All()
         {
-            var queryable = this.GetQueryable<CategorySearchResultItem>();
+            var queryable = this.GetQueryable();
 
             queryable = queryable.Where(result => result.TemplateId == BlogCategory.TemplateId)
                                  .Where(result => result.Name != "__Standard Values");

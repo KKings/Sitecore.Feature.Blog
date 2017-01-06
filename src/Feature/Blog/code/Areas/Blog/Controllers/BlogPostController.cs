@@ -1,12 +1,10 @@
 ﻿namespace Sitecore.Feature.Blog.Areas.Blog.Controllers
 {
-    using System;
     using System.Linq;
     using System.Web.Mvc;
     using Collections;
     using Items;
     using Models;
-    using Mvc.Controllers;
     using Repositories;
     using Services;
 
@@ -35,15 +33,14 @@
             return this.View("~/areas/blog/views/shared/BlogViewModel.cshtml",(BlogViewModel)blogPost);
         }
 
-        public virtual ActionResult BlogPostCategories()
+        public virtual ActionResult RelatedPostListing()
         {
-            return this.View();
-        }
+            var blogPost = (BlogPostItem)Mvc.Presentation.RenderingContext.Current.ContextItem;
+            var title = this.renderingService.GetTitle(Mvc.Presentation.RenderingContext.CurrentOrNull);
+            var posts = this.blogService.Related(blogPost);
 
-
-        public virtual ActionResult BlogPostRelatedPosts()
-        {
-            return this.View();
+            var viewModel = new RelatedPostListingViewModel(title, posts);
+            return this.View(viewModel);
         }
 
         public virtual ActionResult BlogArchivesListing()

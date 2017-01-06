@@ -70,10 +70,11 @@ namespace Sitecore.Feature.Blog.Extensions
                 MediaId = field.MediaID.Guid
             };
 
-
             if (field.MediaItem != null)
             {
-                image.Src = MediaManager.GetMediaUrl(field.MediaItem);
+                var options = new MediaUrlOptions { AlwaysIncludeServerUrl = true };
+
+                image.Src = MediaManager.GetMediaUrl(field.MediaItem, options);
 
                 var fieldTitle = field.MediaItem.Fields["Title"];
 

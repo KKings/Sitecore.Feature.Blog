@@ -17,7 +17,7 @@
             var title = blogPost.Title;
             var description = Regex.Replace(blogPost.Summary, "<.*?>", String.Empty);
             var type = "article";
-            var imageUrl = String.Empty;
+            var imageUrl = blogPost.Thumbnail?.Src;
 
             var viewModel = new OpenGraphMetadataViewModel(url, title, description, type, imageUrl);
 

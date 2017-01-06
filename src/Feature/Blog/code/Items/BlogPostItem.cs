@@ -47,6 +47,11 @@
         /// <summary>
         /// Gets the Summary as Rendered Html
         /// </summary>
+        public ImageMedia FullThumbnail => this.InnerItem.FieldToImageMedia(BlogPost.ThumbnailFieldId);
+
+        /// <summary>
+        /// Gets the Summary as Rendered Html
+        /// </summary>
         public string Summary => this.InnerItem.FieldToHtml(BlogPost.SummaryFieldId);
 
         /// <summary>

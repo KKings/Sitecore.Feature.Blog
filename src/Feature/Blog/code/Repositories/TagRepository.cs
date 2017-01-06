@@ -8,7 +8,7 @@
     using Search;
     using Sitecore.Feature.Blog.Feature.Blog;
 
-    public class TagRepository : ContentSearchRepository, ITagRepository
+    public class TagRepository : ContentSearchRepository<TagSearchResultItem>, ITagRepository
     {
         public TagRepository(IIndexProvider indexProvider) : base(indexProvider) { }
 
@@ -18,7 +18,7 @@
         /// <returns></returns>
         public IEnumerable<ITag> All()
         {
-            var queryable = this.GetQueryable<TagSearchResultItem>();
+            var queryable = this.GetQueryable();
 
             queryable = queryable.Where(result => result.TemplateId == BlogTag.TemplateId)
                                  .Where(result => result.Name != "__Standard Values");

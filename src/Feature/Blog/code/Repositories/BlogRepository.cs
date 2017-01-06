@@ -3,9 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Linq.Expressions;
     using ContentSearch.Linq;
-    using ContentSearch.SearchTypes;
     using Data;
     using Domain;
     using Providers;
@@ -15,7 +13,7 @@
     /// <summary>
     /// 
     /// </summary>
-    public class BlogRepository : ContentSearchRepository, IBlogRepository
+    public class BlogRepository<T> : ContentSearchRepository<T>, IBlogRepository<T> where T : BlogSearchResultItem
     {
         public BlogRepository(IIndexProvider indexProvider) : base(indexProvider)
         {
@@ -28,56 +26,57 @@
         /// <returns></returns>
         public virtual IBlog Get(ID id)
         {
-            var queryable = this.GetQueryable<BlogSearchResultItem>();
+            var query = new SearchQuery<T>
+            {
+                Queries = new ExpressionBuilder<T>().Where(m => m.ItemId == id).Build(),
+                Filters = new ExpressionBuilder<T>().Where(m => m.TemplateId == BlogPost.TemplateId).Build(),
+                Paging = new Paging
+                {
+                    Display = 1
+                }
+            };
 
-            queryable = queryable.Where(result => result.ItemId == id)
-                                 .Where(result => result.TemplateId == BlogPost.TemplateId);
-
-            queryable = queryable.Take(1);
-
-            var results =  this.GetResults(queryable);
-
-            return results.Hits.Any() ? results.Hits.First().Document : null;
+            return this.Query(query).FirstOrDefault();
         }
 
         public virtual IBlog Get(string slug)
         {
-            var queryable = this.GetQueryable<BlogSearchResultItem>();
+            var query = new SearchQuery<T>
+            {
+                Queries = new ExpressionBuilder<T>().Where(m => m.Name == slug).Build(),
+                Filters = new ExpressionBuilder<T>().Where(m => m.TemplateId == BlogPost.TemplateId).Build(),
+                Paging = new Paging
+                {
+                    Display = 1
+                }
+            };
 
-            queryable = queryable.Where(result => result.Name == slug)
-                                 .Where(result => result.TemplateId == BlogPost.TemplateId);
-
-            queryable = queryable.Take(1);
-
-            var results = this.GetResults(queryable);
-
-            return results.Hits.Any() ? results.Hits.First().Document : null;
+            return this.Query(query).FirstOrDefault();
         }
-
-        public virtual IEnumerable<BlogSearchResultItem> All(Expression<Func<BlogSearchResultItem, object>> sorting = null, bool descending = false)
+        
+        public virtual IEnumerable<T> Query(SearchQuery<T> searchQuery)
         {
-            var queryable = this.GetQueryable<BlogSearchResultItem>();
+            var queryable = this.GetQueryable();
 
             queryable = queryable.Where(result => result.TemplateId == BlogPost.TemplateId)
                                  .Where(result => result.Name != "__Standard Values");
 
-            if (sorting != null)
-            {
-                queryable = descending ? queryable.OrderByDescending(sorting) : queryable.OrderBy(sorting);
-            }
+            queryable = this.ApplyQueries(queryable, searchQuery);
+            queryable = this.ApplySorting(queryable, searchQuery.Sorts);
+            queryable = this.ApplyPaging(queryable, searchQuery.Paging);
 
             var results = this.GetResults(queryable);
 
             return results.Hits.Select(m => m.Document);
         }
-
+        
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
         public virtual FacetResults Archives()
         {
-            var queryable = this.GetQueryable<BlogSearchResultItem>();
+            var queryable = this.GetQueryable();
 
             queryable = queryable.Where(result => result.TemplateId == BlogPost.TemplateId)
                                  .Where(result => result.Name != "__Standard Values");
@@ -88,10 +87,5 @@
 
             return results;
         }
-
-        public virtual IEnumerable<BlogSearchResultItem> Related(IBlog blog)
-        {
-            throw new NotImplementedException();
         }
-    }
 }
