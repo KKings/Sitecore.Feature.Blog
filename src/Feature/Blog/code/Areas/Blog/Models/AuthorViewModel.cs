@@ -1,5 +1,6 @@
 ﻿namespace Sitecore.Feature.Blog.Areas.Blog.Models
 {
+    using Domain;
     using Items;
 
     public class AuthorViewModel

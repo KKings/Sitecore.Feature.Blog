@@ -38,10 +38,24 @@ key: parameters template
 content-length: 38
 
 {1D15C746-52D2-484E-A528-439583F898AA}
+----field----
+field: {3D08DB46-2267-41B0-BC52-BE69FD618633}
+name: Cacheable
+key: cacheable
+content-length: 0
+
+
+----field----
+field: {8B6D532B-6128-4486-A044-CA06D90948BA}
+name: VaryByData
+key: varybydata
+content-length: 0
+
+
 ----version----
 language: en
 version: 1
-revision: 8401471d-3b1b-4136-b98d-8c1a2c1ebbff
+revision: 7e75792b-9975-4edb-bf68-752d92a816f9
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -70,14 +84,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8401471d-3b1b-4136-b98d-8c1a2c1ebbff
+7e75792b-9975-4edb-bf68-752d92a816f9
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170105T204428Z
+20170116T165153Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -9,8 +9,8 @@
                 @foreach (var tag in Model.Tags)
                 {
                     <text>
-                        <li class="tag-item tag-@tag.Part2">
-                            <a href="@tag.Part1">@tag.Part2</a>
+                        <li class="tag-item tag-@tag.Name">
+                            <a href="@tag.Url">@tag.Name</a>
                         </li>
                     </text>
                 }

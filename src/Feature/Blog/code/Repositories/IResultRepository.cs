@@ -12,11 +12,11 @@
     {
         IQueryable<T> GetQueryable();
 
-        SearchResults<T> GetResults(IQueryable<T> queryable);
+        ContentSearch.Linq.SearchResults<T> GetResults(IQueryable<T> queryable);
 
         FacetResults GetFacetResults(IQueryable<T> queryable);
 
-        IQueryable<T> ApplyQueries(IQueryable<T> queryable, SearchQuery<T> searchQuery);
+        IQueryable<T> ApplyQueries(IQueryable<T> queryable, ISearchQuery<T> searchQuery);
 
         IQueryable<T> ApplyQuery(IQueryable<T> queryable, Expression<Func<T, bool>> filter);
 

@@ -5,8 +5,8 @@
     using System.Linq;
     using Data.Items;
     using Data.Managers;
+    using Domain;
     using Extensions;
-    using Search;
     using Sitecore.Feature.Blog.Feature.Blog;
 
     public class BlogPostItem : CustomItem
@@ -65,18 +65,23 @@
         public DateTime PublishDate => this.InnerItem.FieldToDateTime(BlogPost.PublishDateFieldId);
 
         /// <summary>
-        /// 
+        /// Gets the Author Items
         /// </summary>
         public IList<AuthorItem> Authors => this.InnerItem.FieldListToItems(BlogPost.AuthorsFieldId).Select(item => (AuthorItem)item).ToArray();
 
         /// <summary>
-        /// 
+        /// Gets the Tag Items
         /// </summary>
         public IList<TagItem> Tags => this.InnerItem.FieldListToItems(BlogPost.TagsFieldId).Select(item => (TagItem)item).ToArray();
 
         /// <summary>
-        /// 
+        /// Gets the Category Items
         /// </summary>
         public IList<CategoryItem> Categories => this.InnerItem.FieldListToItems(BlogPost.CategoriesFieldId).Select(item => (CategoryItem)item).ToArray();
+
+        /// <summary>
+        /// Gets the Unique Slug
+        /// </summary>
+        public string Slug => this.InnerItem[BlogPost.SlugFieldId];
     }
 }

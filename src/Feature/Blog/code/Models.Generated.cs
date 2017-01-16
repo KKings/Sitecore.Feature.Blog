@@ -72,17 +72,54 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 
 	
 	/// <summary>
-	/// BlogAuthors
+	/// BlogListingParameters
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Blog/Blog Authors</para>	
-	/// <para>ID: 524bc597-b41e-4673-8cc6-574fe788ba77</para>	
+	/// <para>Path: /sitecore/templates/Feature/Blog/Blog Listing Parameters</para>	
+	/// <para>ID: 26482946-622b-45cc-991b-23aa148d83dd</para>	
 	/// </summary>
-	public partial class BlogAuthors 
+	public partial class BlogListingParameters 
 	{
-			public const string TemplateIdString = "524bc597-b41e-4673-8cc6-574fe788ba77";
+			public const string TemplateIdString = "26482946-622b-45cc-991b-23aa148d83dd";
 			public static readonly ID TemplateId = new ID(TemplateIdString);
-			public const string TemplateName = "Blog Authors";
+			public const string TemplateName = "Blog Listing Parameters";
 
+			   
+			public const string PostsPerPageFieldIdRaw = "68b3edfb-41a4-4914-93f5-c21fdcdbeed0";
+			public static readonly ID PostsPerPageFieldId = new ID("68b3edfb-41a4-4914-93f5-c21fdcdbeed0");
+			public const string PostsPerPageFieldName = "Posts Per Page";
+			
+			}
+}
+﻿
+
+
+
+
+
+
+
+
+namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+{
+
+	
+	/// <summary>
+	/// BlogSlug
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Feature/Blog/_Blog Slug</para>	
+	/// <para>ID: 343df744-b726-480b-954f-d4ab5e08d7d4</para>	
+	/// </summary>
+	public partial class BlogSlug 
+	{
+			public const string TemplateIdString = "343df744-b726-480b-954f-d4ab5e08d7d4";
+			public static readonly ID TemplateId = new ID(TemplateIdString);
+			public const string TemplateName = "_Blog Slug";
+
+			   
+			public const string SlugFieldIdRaw = "8e301bcf-11ae-40bd-9465-4ca58351c8f6";
+			public static readonly ID SlugFieldId = new ID("8e301bcf-11ae-40bd-9465-4ca58351c8f6");
+			public const string SlugFieldName = "Slug";
+			
 			}
 }
 ﻿
@@ -162,6 +199,11 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 			public static readonly ID TitleFieldId = new ID("4c045da9-9969-49f8-9f7f-6c7a7b607f18");
 			public const string TitleFieldName = "Title";
 			
+			   
+			public const string SlugFieldIdRaw = "8e301bcf-11ae-40bd-9465-4ca58351c8f6";
+			public static readonly ID SlugFieldId = new ID("8e301bcf-11ae-40bd-9465-4ca58351c8f6");
+			public const string SlugFieldName = "Slug";
+			
 			}
 }
 ﻿
@@ -194,6 +236,11 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 			public static readonly ID TagNameFieldId = new ID("94009472-3730-4f62-a8c7-3750baf1d57b");
 			public const string TagNameFieldName = "Tag Name";
 			
+			   
+			public const string SlugFieldIdRaw = "8e301bcf-11ae-40bd-9465-4ca58351c8f6";
+			public static readonly ID SlugFieldId = new ID("8e301bcf-11ae-40bd-9465-4ca58351c8f6");
+			public const string SlugFieldName = "Slug";
+			
 			}
 }
 ﻿
@@ -225,6 +272,11 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 			public const string CategoryNameFieldIdRaw = "c77f7b33-3503-4f24-84d9-766735e2ef12";
 			public static readonly ID CategoryNameFieldId = new ID("c77f7b33-3503-4f24-84d9-766735e2ef12");
 			public const string CategoryNameFieldName = "Category Name";
+			
+			   
+			public const string SlugFieldIdRaw = "8e301bcf-11ae-40bd-9465-4ca58351c8f6";
+			public static readonly ID SlugFieldId = new ID("8e301bcf-11ae-40bd-9465-4ca58351c8f6");
+			public const string SlugFieldName = "Slug";
 			
 			}
 }
@@ -293,33 +345,11 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 			public static readonly ID TagsFieldId = new ID("7a15403a-1086-4334-9610-bcee8db49cd9");
 			public const string TagsFieldName = "Tags";
 			
-			}
-}
-﻿
-
-
-
-
-
-
-
-
-namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
-{
-
-	
-	/// <summary>
-	/// BlogCategories
-	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Blog/Blog Categories</para>	
-	/// <para>ID: c8ce3a4e-101c-471a-9c9b-3b079a0cc365</para>	
-	/// </summary>
-	public partial class BlogCategories 
-	{
-			public const string TemplateIdString = "c8ce3a4e-101c-471a-9c9b-3b079a0cc365";
-			public static readonly ID TemplateId = new ID(TemplateIdString);
-			public const string TemplateName = "Blog Categories";
-
+			   
+			public const string SlugFieldIdRaw = "8e301bcf-11ae-40bd-9465-4ca58351c8f6";
+			public static readonly ID SlugFieldId = new ID("8e301bcf-11ae-40bd-9465-4ca58351c8f6");
+			public const string SlugFieldName = "Slug";
+			
 			}
 }
 ﻿
@@ -400,33 +430,6 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 			public const string TemplateIdString = "e58b747b-d2d4-4db9-a535-0dec41bc4f2a";
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Blog";
-
-			}
-}
-﻿
-
-
-
-
-
-
-
-
-namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
-{
-
-	
-	/// <summary>
-	/// BlogTags
-	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Blog/Blog Tags</para>	
-	/// <para>ID: ee583523-4cd9-4235-83c2-96c4aef68986</para>	
-	/// </summary>
-	public partial class BlogTags 
-	{
-			public const string TemplateIdString = "ee583523-4cd9-4235-83c2-96c4aef68986";
-			public static readonly ID TemplateId = new ID(TemplateIdString);
-			public const string TemplateName = "Blog Tags";
 
 			}
 }

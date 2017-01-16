@@ -1,58 +1,60 @@
-﻿
-namespace Sitecore.Feature.Blog.Areas.Blog.Models
+﻿namespace Sitecore.Feature.Blog.Areas.Blog.Models
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Data;
-    using Data.Managers;
+    using Domain;
     using Items;
-    using Sitecore.Feature.Blog.Feature.Blog;
 
     public class BlogViewModel
     {
         /// <summary>
-        /// 
+        /// Gets or sets if the view should display the body
+        /// </summary>
+        public bool DisplayBody { get; set; } = false;
+
+        /// <summary>
+        /// Gets or sets the Post Title
         /// </summary>
         public string PostTitle { get; set; }
 
         /// <summary>
-        /// 
+        /// Gets or sets the Post Summary
         /// </summary>
         public string Summary { get; set; }
 
         /// <summary>
-        /// 
+        /// Gets or sets the Post Body
         /// </summary>
         public string Body { get; set; }
 
         /// <summary>
-        /// 
+        /// Gets or sets the Published Date
         /// </summary>
         public DateTime PublishDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Gets or sets the Post Permalink
         /// </summary>
         public string Url { get; set; }
 
         /// <summary>
-        /// 
+        /// Gets or sets the the Post Thumbnail
         /// </summary>
         public ImageMedia Thumbnail { get; set; }
 
         /// <summary>
-        /// 
+        /// Gets or sets the Post Authors
         /// </summary>
         public IList<AuthorViewModel> Authors { get; set; } = new AuthorViewModel[0];
 
         /// <summary>
-        /// 
+        /// Gets or sets the Post Categories
         /// </summary>
         public IList<CategoryViewModel> Categories { get; set; } = new CategoryViewModel[0];
 
         /// <summary>
-        /// 
+        /// Gets or sets the Post Tags
         /// </summary>
         public IList<TagViewModel> Tags { get; set; } = new TagViewModel[0];
 

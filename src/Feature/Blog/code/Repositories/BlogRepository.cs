@@ -3,7 +3,9 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Linq.Expressions;
     using ContentSearch.Linq;
+    using ContentSearch.SearchTypes;
     using Data;
     using Domain;
     using Providers;
@@ -13,7 +15,7 @@
     /// <summary>
     /// 
     /// </summary>
-    public class BlogRepository<T> : ContentSearchRepository<T>, IBlogRepository<T> where T : BlogSearchResultItem
+    public class BlogRepository<T> : ContentSearchRepository<T>, IBlogRepository<T> where T : SearchResultItem
     {
         public BlogRepository(IIndexProvider indexProvider) : base(indexProvider)
         {
@@ -24,7 +26,7 @@
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public virtual IBlog Get(ID id)
+        public virtual T Get(ID id)
         {
             var query = new SearchQuery<T>
             {
@@ -39,7 +41,12 @@
             return this.Query(query).FirstOrDefault();
         }
 
-        public virtual IBlog Get(string slug)
+        public virtual ISearchQuery<T> MakeQuery()
+        {
+            return new SearchQuery<T>();
+        }
+        
+        public virtual T Get(string slug)
         {
             var query = new SearchQuery<T>
             {
@@ -54,7 +61,7 @@
             return this.Query(query).FirstOrDefault();
         }
         
-        public virtual IEnumerable<T> Query(SearchQuery<T> searchQuery)
+        public virtual IEnumerable<T> Query(ISearchQuery<T> searchQuery)
         {
             var queryable = this.GetQueryable();
 
@@ -74,18 +81,22 @@
         /// 
         /// </summary>
         /// <returns></returns>
-        public virtual FacetResults Archives()
+        public virtual FacetResults Archives<TKey>(ISearchQuery<T> query, Expression<Func<T, TKey>> keySelector)
         {
             var queryable = this.GetQueryable();
 
             queryable = queryable.Where(result => result.TemplateId == BlogPost.TemplateId)
                                  .Where(result => result.Name != "__Standard Values");
 
-            queryable = queryable.FacetOn(m => m.ArchiveMonth);
+            queryable = this.ApplyQueries(queryable, query);
+            queryable = this.ApplySorting(queryable, query.Sorts);
+            queryable = this.ApplyPaging(queryable, query.Paging);
+
+            queryable = queryable.FacetOn(keySelector);
 
             var results = this.GetFacetResults(queryable);
 
             return results;
         }
-        }
+    }
 }

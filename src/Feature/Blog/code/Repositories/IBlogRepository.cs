@@ -1,21 +1,23 @@
-﻿
-namespace Sitecore.Feature.Blog.Repositories
+﻿namespace Sitecore.Feature.Blog.Repositories
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq.Expressions;
     using ContentSearch.Linq;
+    using ContentSearch.SearchTypes;
     using Data;
-    using Domain;
     using Search;
 
-    public interface IBlogRepository<T> where T : BlogSearchResultItem
+    public interface IBlogRepository<T> where T : SearchResultItem
     {
-        IBlog Get(ID id);
+        T Get(ID id);
 
-        IBlog Get(string slug);
+        T Get(string slug);
 
-        IEnumerable<T> Query(SearchQuery<T> query);
+        ISearchQuery<T> MakeQuery();
 
-        FacetResults Archives();
+        IEnumerable<T> Query(ISearchQuery<T> query);
+
+        FacetResults Archives<TKey>(ISearchQuery<T> query, Expression<Func<T, TKey>> keySelector);
     }
 }

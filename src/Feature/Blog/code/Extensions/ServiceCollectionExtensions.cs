@@ -1,5 +1,4 @@
-﻿
-namespace Sitecore.Feature.Blog.Extensions
+﻿namespace Sitecore.Feature.Blog.Extensions
 {
     using System;
     using System.Collections.Generic;
@@ -19,6 +18,12 @@ namespace Sitecore.Feature.Blog.Extensions
             serviceCollection.AddMvcControllers(Assembly.GetCallingAssembly());
         }
 
+        /// <summary>
+        /// Adds all types implementing <see cref="IController"/> into the <see cref="serviceCollection"/> as Transient filtered by
+        /// a list of matching names
+        /// </summary>
+        /// <param name="serviceCollection">The Service Collection</param>
+        /// <param name="assemblyFilters">The Assembly Filters</param>
         public static void AddMvcControllers(this IServiceCollection serviceCollection, params string[] assemblyFilters)
         {
             var assemblyNames = new HashSet<string>(assemblyFilters.Where(filter => !filter.Contains('*')));
@@ -36,6 +41,11 @@ namespace Sitecore.Feature.Blog.Extensions
             serviceCollection.AddMvcControllers(assemblies);
         }
 
+        /// <summary>
+        /// Adds all types implementing <see cref="IController"/> into the <see cref="serviceCollection"/> as Transient
+        /// </summary>
+        /// <param name="serviceCollection">The Service Collection</param>
+        /// <param name="assemblies">The Assemblies</param>
         public static void AddMvcControllers(this IServiceCollection serviceCollection, params Assembly[] assemblies)
         {
             var controllers = ServiceCollectionExtensions.GetTypesImplementing<IController>(assemblies)
@@ -47,6 +57,12 @@ namespace Sitecore.Feature.Blog.Extensions
             }
         }
 
+        /// <summary>
+        /// Gets all types implementing a <see cref="T"/>
+        /// </summary>
+        /// <typeparam name="T">The Type</typeparam>
+        /// <param name="assemblies">Assemblies</param>
+        /// <returns>The Types implementing <see cref="T"/></returns>
         public static Type[] GetTypesImplementing<T>(params Assembly[] assemblies)
         {
             if (assemblies == null || assemblies.Length == 0)
@@ -63,6 +79,11 @@ namespace Sitecore.Feature.Blog.Extensions
                 .ToArray();
         }
 
+        /// <summary>
+        /// Gets all types that are publically available outside of the assembly
+        /// </summary>
+        /// <param name="assembly">The Assembly</param>
+        /// <returns>The Types that are public</returns>
         private static IEnumerable<Type> GetExportedTypes(Assembly assembly)
         {
             try
@@ -83,7 +104,7 @@ namespace Sitecore.Feature.Blog.Extensions
             catch (Exception ex)
             {
                 // Throw a more descriptive message containing the name of the assembly.
-                throw new InvalidOperationException(string.Format(CultureInfo.InvariantCulture,
+                throw new InvalidOperationException(String.Format(CultureInfo.InvariantCulture,
                     "Unable to load types from assembly {0}. {1}", assembly.FullName, ex.Message), ex);
             }
         }

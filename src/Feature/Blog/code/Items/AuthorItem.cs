@@ -3,6 +3,7 @@ namespace Sitecore.Feature.Blog.Items
 {
     using Data.Items;
     using Data.Managers;
+    using Domain;
     using Extensions;
     using Sitecore.Feature.Blog.Feature.Blog;
 
@@ -30,6 +31,11 @@ namespace Sitecore.Feature.Blog.Items
         /// Gets the Item Url
         /// </summary>
         public string Url => this.InnerItem.ItemUrl();
+
+        /// <summary>
+        /// Gets the Author Title
+        /// </summary>
+        public string Slug => this.InnerItem[BlogAuthor.SlugFieldId];
 
         /// <summary>
         /// Gets the Author Title

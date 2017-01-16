@@ -17,10 +17,17 @@ key: __bucketable
 content-length: 1
 
 1
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 894
+
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{70EFEAB9-CFCF-4E4D-A37C-999D5C06A0A8}"><r ds="" id="{EB34C80D-82B0-4889-B324-80CA90C2CF7A}" par="Posts Per Page=3&amp;VaryByBlog=true" ph="body" uid="{5E410F45-71AE-40A7-B617-F068D4D17339}" /><r ds="" id="{C157DE9B-65E4-44F4-ABC4-10DDE2294C29}" par="Rendering Title=%7B670CCAA3-6A16-4390-9109-3696803EE11B%7D&amp;VaryByBlog=true" ph="sidebar" uid="{F82096B1-0E21-47C4-87E2-C4D5F1E634D4}" /><r ds="" id="{69F3693C-15D1-46EC-882D-7628845DC4C3}" par="Rendering Title=%7B546C1166-0738-45D1-BB97-CC7AC41A9AC2%7D&amp;VaryByBlog=true" ph="sidebar" uid="{09C7C877-7A12-4943-8FCF-442B63812562}" /><r ds="" id="{94E71F9C-6857-4D7D-B172-3A38A8C7D0CE}" par="Rendering Title=%7BE61BBCD2-BB30-47DC-BEBA-25FA08E7045C%7D&amp;VaryByBlog=true" ph="sidebar" uid="{2D92BA18-8F8A-4E9E-AADE-2F70C9E3819B}" /></d></r>
 ----version----
 language: en
 version: 1
-revision: 961bdb2b-44da-43a2-a0c0-5402ec0de9a4
+revision: 4c991c6b-4db1-4952-a99d-eb76f9027c83
 
 ----field----
 field: {94009472-3730-4F62-A8C7-3750BAF1D57B}
@@ -29,6 +36,13 @@ key: tag name
 content-length: 5
 
 $name
+----field----
+field: {8E301BCF-11AE-40BD-9465-4CA58351C8F6}
+name: Slug
+key: slug
+content-length: 4
+
+name
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -56,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-961bdb2b-44da-43a2-a0c0-5402ec0de9a4
+4c991c6b-4db1-4952-a99d-eb76f9027c83
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170103T205219Z
+20170116T172034Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

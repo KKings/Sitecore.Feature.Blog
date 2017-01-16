@@ -32,6 +32,20 @@ content-length: 4
 
 Blog
 ----field----
+field: {3D08DB46-2267-41B0-BC52-BE69FD618633}
+name: Cacheable
+key: cacheable
+content-length: 0
+
+
+----field----
+field: {8B6D532B-6128-4486-A044-CA06D90948BA}
+name: VaryByData
+key: varybydata
+content-length: 0
+
+
+----field----
 field: {308E88F5-CD6E-4F8F-BAFE-95A47DEDEFDC}
 name: Editable
 key: editable
@@ -41,7 +55,7 @@ content-length: 0
 ----version----
 language: en
 version: 1
-revision: faaaaaa5-06e7-41a9-8524-204775d5a032
+revision: 0e8a9caf-6bd9-41bc-b766-78a99932c295
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -70,14 +84,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-faaaaaa5-06e7-41a9-8524-204775d5a032
+0e8a9caf-6bd9-41bc-b766-78a99932c295
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170104T153438Z
+20170116T165210Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

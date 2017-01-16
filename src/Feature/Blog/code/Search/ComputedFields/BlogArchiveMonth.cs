@@ -32,7 +32,7 @@
             var blogPost = (BlogPostItem)item.Item;
 
             return blogPost.PublishDate != DateTime.MinValue
-                ? $"{blogPost.PublishDate.Month} {blogPost.PublishDate.Year}"
+                ? $"{blogPost.PublishDate.Month}"
                 : "Unknown";
         }
     }

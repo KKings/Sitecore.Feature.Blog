@@ -1,4 +1,6 @@
-﻿@model Sitecore.Feature.Blog.Areas.Blog.Models.BlogViewModel
+﻿@using Sitecore.Feature.Blog.Extensions
+@using Sitecore.Mvc
+@model Sitecore.Feature.Blog.Areas.Blog.Models.BlogViewModel
 
 @if (Model != null)
 {
@@ -18,7 +20,10 @@
                     <img src="@Model.Thumbnail.Src" />
                 </a>
             }
-            <div class="entry-content">@Html.Raw(Model.Body)</div>
+            @if (Model.DisplayBody)
+            {
+                <div class="entry-content">@Html.Raw(Model.Body)</div>
+            }
             <footer class="entry-footer">
                 @if (Model.Authors.Any())
                 {
@@ -30,7 +35,7 @@
                     </span>
                 }
                 <span class="posted-on">
-                    <span class="screen-reader-text">Posted On </span>
+                    <span class="screen-reader-text">@Html.Sitecore().Text("Posted On")&nbsp;</span>
                     <a href="@Model.Url">
                         <time class="entry-date published">@Model.PublishDate.ToString("MMMM dd, yyyy")</time>
                     </a>
@@ -38,7 +43,7 @@
                 @if (Model.Categories.Any())
                 {
                     <span class="cat-links">
-                        <span class="screen-reader-text">Categories </span>
+                        <span class="screen-reader-text">@Html.Sitecore().Text("Categories")&nbsp;</span>
                         @foreach (var category in Model.Categories)
                         {
                             <a href="@category.Url">@category.Name</a>
@@ -48,7 +53,7 @@
                 @if (Model.Tags.Any())
                 {
                     <span class="tag-links">
-                        <span class="screen-reader-text">Tags </span>
+                        <span class="screen-reader-text">@Html.Sitecore().Text("Tags")&nbsp;</span>
                         @foreach (var tag in Model.Tags)
                         {
                             <a href="@tag.Url">@tag.Name</a>

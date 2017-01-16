@@ -14,6 +14,12 @@
         /// </summary>
         public string Url { get; set; }
 
+        public TagViewModel(string url, string name)
+        {
+            this.Url = url;
+            this.Name = name;
+        }
+
         /// <summary>
         /// Convert an <see cref="TagItem"/> to a <see cref="TagViewModel"/>
         /// </summary>
@@ -25,13 +31,7 @@
                 return null;
             }
 
-            var model = new TagViewModel
-            {
-                Url = item.Url,
-                Name = item.TagName
-            };
-
-            return model;
+            return new TagViewModel(item.Url, item.TagName);
         }
     }
 }

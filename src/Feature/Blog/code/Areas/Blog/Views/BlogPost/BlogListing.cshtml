@@ -1,8 +1,21 @@
-﻿@model Sitecore.Feature.Blog.Areas.Blog.Models.BlogListingViewModel
+﻿@using Sitecore.Feature.Blog.Areas.Blog.Models
+@model BlogListingViewModel
 
 <div class="post-listing">
-    @foreach (var item in Model.Blogs)
+    @if (Model.SearchResults.Results.Any())
     {
-        @Html.Partial("BlogViewModel", item)
+        foreach (var item in Model.Posts)
+        {
+            @Html.Partial("BlogViewModel", item)
+        }
+
+        if (Model.Paging != null)
+        {
+            @Html.Partial("PaginationViewModel", Model.Paging)
+        }
+    }
+    else
+    {
+        <p>No posts found!</p>
     }
 </div>

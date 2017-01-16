@@ -1,0 +1,26 @@
+﻿@using Sitecore.Feature.Blog.Extensions
+@model Sitecore.Feature.Blog.Areas.Blog.Models.PaginationViewModel
+
+@if (Model.Pages.Count() > 1)
+{
+    <nav class="navigation pagination" role="navigation">
+        <h2 class="screen-reader-text">@Html.Sitecore().Text("Posts navigation")</h2>
+        <div class="nav-links">
+            @foreach (var page in Model.Pages)
+            {
+                if (page.IsCurrent)
+                {
+                    <text>
+                        <span class="page-numbers current"><span class="meta-nav screen-reader-text">@Html.Sitecore().Text("Page")&nbsp;</span>@page.Page</span>
+                    </text>
+                }
+                else
+                {
+                    <text>
+                        <a class="page-numbers" href="@page.Url"><span class="meta-nav screen-reader-text">@Html.Sitecore().Text("Page")&nbsp;</span>@page.Page</a>
+                    </text>
+                }
+            }
+        </div>
+    </nav>
+}

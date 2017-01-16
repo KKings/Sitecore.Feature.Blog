@@ -31,8 +31,6 @@ namespace Sitecore.Feature.Blog.Search
             return this.Filter;
         }
 
-
-
         /// <summary>
         /// Groups filters by AND
         /// </summary>

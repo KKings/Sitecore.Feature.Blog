@@ -10,7 +10,7 @@
         /// <summary>
         /// Gets or sets the Start
         /// </summary>
-        public virtual int Start { get; set; } = 0;
+        public virtual int Page { get; set; } = 0;
 
         /// <summary>
         /// Gets or sets the returned results
@@ -27,12 +27,12 @@
                 // If the PageMode is the Pager, we need to calculate the starting position
                 if (this.PageMode == PageMode.Pager)
                 {
-                    return this.Start <= 1
+                    return this.Page <= 1
                         ? 0
-                        : (this.Start - 1) * this.Display;
+                        : (this.Page - 1) * this.Display;
                 }
 
-                return this.Start;
+                return this.Page;
             }
         }
     }

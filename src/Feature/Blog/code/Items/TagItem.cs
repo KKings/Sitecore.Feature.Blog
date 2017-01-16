@@ -36,5 +36,10 @@
         /// The blog tag name
         /// </summary>
         public string TagName => String.IsNullOrEmpty(this.InnerItem[BlogTag.TagNameFieldName]) ? this.InnerItem.Name : this.InnerItem[BlogTag.TagNameFieldName];
+
+        /// <summary>
+        /// Gets the Slug
+        /// </summary>
+        public string Slug => this.InnerItem[BlogTag.SlugFieldId];
     }
 }

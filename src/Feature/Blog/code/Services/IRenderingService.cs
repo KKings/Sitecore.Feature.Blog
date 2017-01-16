@@ -6,5 +6,7 @@ namespace Sitecore.Feature.Blog.Services
     public interface IRenderingService
     {
         string GetTitle(RenderingContext renderingContext);
+
+        int PostsPerPage(RenderingContext renderingContext);
     }
 }

@@ -1,35 +1,33 @@
-﻿
-namespace Sitecore.Feature.Blog.Extensions
+﻿namespace Sitecore.Feature.Blog.Extensions
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Web;
     using Data;
     using Data.Fields;
     using Data.Items;
     using Data.Managers;
-    using Links;
+    using global::Sitecore.Links;
     using Resources.Media;
     using Web.UI.WebControls;
-    using ImageMedia = global::Sitecore.Feature.Blog.Items.ImageMedia;
+    using ImageMedia = Domain.ImageMedia;
 
     public static class ItemExtensions
     {
         /// <summary>
-        /// 
+        /// Renders an Html Field using Sitecore Field Render
         /// </summary>
-        /// <param name="item"></param>
-        /// <param name="fieldId"></param>
-        /// <returns></returns>
+        /// <param name="item">The Item</param>
+        /// <param name="fieldId">The Id of the Field</param>
+        /// <returns>Html Markup</returns>
         public static string FieldToHtml(this Item item, ID fieldId) => FieldRenderer.Render(item, fieldId.ToString());
 
         /// <summary>
-        /// 
+        /// Gets a DateTime from a Field
         /// </summary>
-        /// <param name="item"></param>
-        /// <param name="fieldId"></param>
-        /// <returns></returns>
+        /// <param name="item">The Item</param>
+        /// <param name="fieldId">The Id of the Field</param>
+        /// <returns>Iso DateTime</returns>
         public static DateTime FieldToDateTime(this Item item, ID fieldId)
         {
             var value = item[fieldId];
@@ -41,11 +39,11 @@ namespace Sitecore.Feature.Blog.Extensions
         }
 
         /// <summary>
-        /// 
+        /// Gets a <see cref="ImageMedia"/> from a Image Fields
         /// </summary>
-        /// <param name="item"></param>
-        /// <param name="fieldId"></param>
-        /// <returns></returns>
+        /// <param name="item">The Item</param>
+        /// <param name="fieldId">The Id of the Field</param>
+        /// <returns>Metadata about the Image</returns>
         public static ImageMedia FieldToImageMedia(this Item item, ID fieldId)
         {
             var field = (ImageField)item.Fields[fieldId];
@@ -88,11 +86,11 @@ namespace Sitecore.Feature.Blog.Extensions
         }
 
         /// <summary>
-        /// 
+        /// Gets the Items from a Multilist Field
         /// </summary>
-        /// <param name="item"></param>
-        /// <param name="fieldId"></param>
-        /// <returns></returns>
+        /// <param name="item">The Item</param>
+        /// <param name="fieldId">The Id of the Field</param>
+        /// <returns>List of Items</returns>
         public static IEnumerable<Item> FieldListToItems(this Item item, ID fieldId)
         {
             var field = (MultilistField)item.Fields[fieldId];
@@ -106,10 +104,10 @@ namespace Sitecore.Feature.Blog.Extensions
         }
 
         /// <summary>
-        /// 
+        /// Generates the Item Url
         /// </summary>
-        /// <param name="item"></param>
-        /// <returns></returns>
+        /// <param name="item">The Item</param>
+        /// <returns>The Url</returns>
         public static string ItemUrl(this Item item)
         {
             var options = new UrlOptions { AlwaysIncludeServerUrl = true };
@@ -160,11 +158,11 @@ namespace Sitecore.Feature.Blog.Extensions
         }
 
         /// <summary>
-        /// 
+        /// Checks if the Item is derived from a template
         /// </summary>
-        /// <param name="item"></param>
-        /// <param name="templateId"></param>
-        /// <returns></returns>
+        /// <param name="item">The Item</param>
+        /// <param name="templateId">The Template Id</param>
+        /// <returns><c>true</c> if the item is derived from a template</returns>
         public static bool IsDerived([NotNull] this Item item, [NotNull] ID templateId)
         {
             return TemplateManager.GetTemplate(item).IsDerived(templateId);

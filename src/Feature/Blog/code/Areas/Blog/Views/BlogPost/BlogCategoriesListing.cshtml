@@ -6,11 +6,11 @@
         <div class="widget widget-categories">
             <h2>@Model.Title</h2>
             <ul>
-                @foreach (var tag in Model.Categories)
+                @foreach (var category in Model.Categories)
                 {
                     <text>
-                        <li class="cat-item cat-@tag.Part2">
-                            <a href="@tag.Part1">@tag.Part2</a>
+                        <li class="cat-item cat-@category.Name">
+                            <a href="@category.Url">@category.Name</a>
                         </li>
                     </text>
                 }

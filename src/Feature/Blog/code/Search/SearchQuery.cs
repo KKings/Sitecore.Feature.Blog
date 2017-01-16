@@ -5,7 +5,7 @@
     using System.Linq.Expressions;
     using ContentSearch.SearchTypes;
 
-    public class SearchQuery<T> where T : SearchResultItem
+    public class SearchQuery<T> : ISearchQuery<T> where T : SearchResultItem
     {
         /// <summary>
         /// Gets the Queries to be used within the Where clause

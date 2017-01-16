@@ -17,6 +17,12 @@
         /// </summary>
         public string Url { get; set; }
 
+        public CategoryViewModel(string url, string name)
+        {
+            this.Url = url;
+            this.Name = name;
+        }
+
         /// <summary>
         /// Convert an <see cref="CategoryItem"/> to a <see cref="CategoryViewModel"/>
         /// </summary>
@@ -28,11 +34,7 @@
                 return null;
             }
 
-            var model = new CategoryViewModel
-            {
-                Url = item.Url,
-                Name = item.CategoryName
-            };
+            var model = new CategoryViewModel(item.Url, item.CategoryName);
 
             return model;
         }

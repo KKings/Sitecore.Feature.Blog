@@ -2,10 +2,13 @@
 namespace Sitecore.Feature.Blog.Repositories
 {
     using System.Collections.Generic;
-    using Domain;
+    using Search;
+    using Search.Results;
 
-    public interface ICategoryRepository
+    public interface ICategoryRepository<T> where T : CategorySearchResultItem
     {
-        IEnumerable<ICategory> All();
+        IEnumerable<T> All();
+
+        IEnumerable<T> Query(SearchQuery<T> searchQuery);
     }
 }

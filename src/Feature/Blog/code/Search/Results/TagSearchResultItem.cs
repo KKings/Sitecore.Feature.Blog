@@ -1,10 +1,9 @@
-﻿namespace Sitecore.Feature.Blog.Search
+﻿namespace Sitecore.Feature.Blog.Search.Results
 {
     using ContentSearch;
     using ContentSearch.SearchTypes;
-    using Domain;
 
-    public class TagSearchResultItem : SearchResultItem, ITag
+    public class TagSearchResultItem : SearchResultItem
     {
         [IndexField("tag_name")]
         public string TagName { get; set; }

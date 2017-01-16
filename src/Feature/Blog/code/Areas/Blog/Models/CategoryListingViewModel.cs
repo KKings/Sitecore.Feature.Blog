@@ -14,9 +14,9 @@
         /// <summary>
         /// Gets the Url/Tag Pairs
         /// </summary>
-        public IEnumerable<Pair<string, string>> Categories { get; private set; }
+        public IEnumerable<CategoryViewModel> Categories { get; private set; }
 
-        public CategoryListingViewModel(string title, IEnumerable<Pair<string, string>> categories)
+        public CategoryListingViewModel(string title, IEnumerable<CategoryViewModel> categories)
         {
             if (categories == null)
             {

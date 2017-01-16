@@ -2,7 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using Collections;
 
     public class TagsListingViewModel
@@ -15,9 +14,9 @@
         /// <summary>
         /// Gets the Url/Tag Pairs
         /// </summary>
-        public IEnumerable<Pair<string, string>> Tags { get; private set; }
+        public IEnumerable<TagViewModel> Tags { get; private set; }
 
-        public TagsListingViewModel(string title, IEnumerable<Pair<string, string>> tags)
+        public TagsListingViewModel(string title, IEnumerable<TagViewModel> tags)
         {
             if (tags == null)
             {
