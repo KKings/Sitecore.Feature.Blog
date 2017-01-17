@@ -13,9 +13,15 @@
 
     public class BlogContextResolver : HttpRequestProcessor
     {
+        /// <summary>
+        /// HttpContext Abstraction
+        /// </summary>
         public virtual HttpContextBase HttpContextBase => ServiceLocator.ServiceProvider.GetService<HttpContextBase>();
-        public virtual IBlogContextRepository BlogContextRepository => ServiceLocator.ServiceProvider.GetService<IBlogContextRepository>();
 
+        /// <summary>
+        /// The BlogContext Repository
+        /// </summary>
+        public virtual IBlogContextRepository BlogContextRepository => ServiceLocator.ServiceProvider.GetService<IBlogContextRepository>();
 
         public override void Process(HttpRequestArgs args)
         {
@@ -31,6 +37,7 @@
 
             CorePipeline.Run("blog.resolveContext", contextResolverArgs);
 
+            // If we determine tha twe are within a blog, we need to save the context for controllers/views to use later
             if (contextResolverArgs.BlogContext.IsWithinBlog)
             {
                 this.BlogContextRepository.SaveContext(contextResolverArgs.BlogContext);
@@ -38,10 +45,10 @@
         }
 
         /// <summary>
-        /// 
+        /// Determines if the request is for a file on the file system
         /// </summary>
-        /// <param name="filePath"></param>
-        /// <returns></returns>
+        /// <param name="filePath">The File Path</param>
+        /// <returns><c>true</c> if the request is for a file system file</returns>
         public virtual bool IsRequestForPhysicalFile(string filePath)
         {
             return File.Exists(this.HttpContextBase.Server.MapPath(filePath));         

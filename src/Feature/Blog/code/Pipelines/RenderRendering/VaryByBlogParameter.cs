@@ -9,8 +9,14 @@
 
     public class VaryByBlogParameter : RenderRenderingProcessor
     {
+        /// <summary>
+        /// The Blog Context Repository
+        /// </summary>
         private IBlogContextRepository contextRepository { get {  return ServiceLocator.ServiceProvider.GetService<IBlogContextRepository>(); } }
 
+        /// <summary>
+        /// The Cache Key stored within the 'extra' parameters
+        /// </summary>
         private const string VaryByBlogParameterKey = "VaryByBlog";
 
         public override void Process(RenderRenderingArgs args)
