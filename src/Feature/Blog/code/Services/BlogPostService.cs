@@ -108,7 +108,7 @@
                               url =
                                   this.resolverService.GetAbstractUrl(new Dictionary<string, object> { { "$month", facet.values[0] }, { "$year", facet.values[1] } })
                           })
-                          .OrderByDescending(facet => facet.year).ThenBy(facet => facet.month)
+                          .OrderByDescending(facet => facet.year).ThenByDescending(facet => facet.month)
                           .Select(archive => new Archive(archive.url, $"{archive.monthName} {archive.year} ({archive.count})"));
 
         }
