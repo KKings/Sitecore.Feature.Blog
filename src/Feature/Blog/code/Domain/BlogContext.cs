@@ -19,7 +19,7 @@
         /// <summary>
         /// 
         /// </summary>
-        public ID Blog { get; set; }
+        public ID Blog { get; set; } = ID.Null;
 
         /// <summary>
         /// 

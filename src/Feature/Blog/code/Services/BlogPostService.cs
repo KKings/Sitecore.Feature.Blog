@@ -86,12 +86,7 @@
                     .Where(m => m.Paths.Contains(context.Blog))
                     .Where(result => result.ArchiveFacet != "unknown")
                     .Build(),
-                Filters = new ExpressionBuilder<BlogSearchResultItem>().Where(m => m.TemplateId == BlogPost.TemplateId).Build(),
-                Sorts = new List<SortExpression<BlogSearchResultItem>>
-                {
-                    new SortExpression<BlogSearchResultItem>(m => m.ArchiveYear, SortExpression<BlogSearchResultItem>.Sorting.Descending),
-                    new SortExpression<BlogSearchResultItem>(m => m.ArchiveMonth)
-                }
+                Filters = new ExpressionBuilder<BlogSearchResultItem>().Where(m => m.TemplateId == BlogPost.TemplateId).Build()
             };
 
             var results = this.repository.Facet(searchQuery, m => m.ArchiveFacet);
@@ -113,6 +108,7 @@
                               url =
                                   this.resolverService.GetAbstractUrl(new Dictionary<string, object> { { "$month", facet.values[0] }, { "$year", facet.values[1] } })
                           })
+                          .OrderByDescending(facet => facet.year).ThenBy(facet => facet.month)
                           .Select(archive => new Archive(archive.url, $"{archive.monthName} {archive.year} ({archive.count})"));
 
         }

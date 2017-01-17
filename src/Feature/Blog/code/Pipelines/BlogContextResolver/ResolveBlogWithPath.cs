@@ -5,7 +5,7 @@
     using Microsoft.Extensions.DependencyInjection;
     using Services;
 
-    public class ResolveBlog
+    public class ResolveBlogWithPath
     {
         /// <summary>
         /// The Blog Service

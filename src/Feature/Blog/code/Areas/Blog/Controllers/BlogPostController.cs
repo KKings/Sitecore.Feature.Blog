@@ -135,7 +135,6 @@
         /// <summary>
         /// Renders the Blog Categories Listing
         /// </summary>
-        /// <returns></returns>
         public virtual ActionResult BlogCategoriesListing()
         {
             var blogContext = this.contextRepository.GetContext();
@@ -148,6 +147,16 @@
                 categories: categories.Select(cat => new CategoryViewModel(cat.Url, cat.CategoryName)));
 
             return this.View(viewModel);
+        }
+
+        /// <summary>
+        /// Renders the Page Header for a Blog Item
+        /// </summary>
+        public virtual ActionResult BlogPageHeader()
+        {
+            var pageHeaderItem = (PageHeaderItem)Mvc.Presentation.RenderingContext.Current.ContextItem;
+
+            return this.View(pageHeaderItem);
         }
     }
 }

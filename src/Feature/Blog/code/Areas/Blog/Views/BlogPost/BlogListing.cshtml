@@ -6,6 +6,7 @@
     {
         foreach (var item in Model.Posts)
         {
+            item.DisplayBody = true;
             @Html.Partial("BlogViewModel", item)
         }
 

@@ -174,6 +174,7 @@
     <Content Include="Areas\Blog\Views\BlogPost\BlogTagsListing.cshtml" />
     <Content Include="Areas\Blog\Views\Shared\BlogViewModel.cshtml" />
     <Content Include="Areas\Blog\Views\Shared\PaginationViewModel.cshtml" />
+    <Content Include="Areas\Blog\Views\BlogPost\BlogPageHeader.cshtml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
@@ -213,14 +214,16 @@
     <Compile Include="Items\BlogPostItem.cs" />
     <Compile Include="Domain\ImageMedia.cs" />
     <Compile Include="Items\CategoryItem.cs" />
+    <Compile Include="Items\PageHeaderItem.cs" />
     <Compile Include="Items\TagItem.cs" />
     <Compile Include="Links\LinkPipelineProvider.cs" />
     <Compile Include="Models.Generated.cs" />
     <Compile Include="Pipelines\BlogAbstractUrlResolver\AbstractUrlMappingResolver.cs" />
     <Compile Include="Pipelines\BlogAbstractUrlResolver\BlogAbstractUrlResolverArgs.cs" />
     <Compile Include="Pipelines\BlogContextResolver\BlogContextArgs.cs" />
+    <Compile Include="Pipelines\BlogContextResolver\ResolveBlogInEditor.cs" />
     <Compile Include="Pipelines\BlogContextResolver\ResolveContextItem.cs" />
-    <Compile Include="Pipelines\BlogContextResolver\ResolveBlog.cs" />
+    <Compile Include="Pipelines\BlogContextResolver\ResolveBlogWithPath.cs" />
     <Compile Include="Pipelines\BlogGenerateSlug\BlogCategorySlugGenerator.cs" />
     <Compile Include="Pipelines\BlogGenerateSlug\BlogGenerateSlugArgs.cs" />
     <Compile Include="Pipelines\BlogGenerateSlug\BlogAuthorSlugGenerator.cs" />

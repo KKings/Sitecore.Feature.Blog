@@ -1,34 +1,27 @@
 ----item----
 version: 1
-id: {ED6358A0-F570-4230-98C6-D8BC1EA9E778}
+id: {AE8CD4CE-E1AB-426E-82DA-C98027B3A2CF}
 database: master
-path: /sitecore/system/Dictionary/Blog/Related Posts
-parent: {F9442F16-4231-4ABA-B0C0-3E63A666A0BF}
-name: Related Posts
+path: /sitecore/templates/Feature/Blog/_Page Header/__Standard Values
+parent: {B5F7CB20-18AE-4D18-95FE-502C69E0320F}
+name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {6D1CD897-1936-4A3A-A511-289A94C2A7B1}
-templatekey: Dictionary entry
-created: 20170106T210626Z
+template: {B5F7CB20-18AE-4D18-95FE-502C69E0320F}
+templatekey: _Page Header
+created: 20170117T194933Z
 
-----field----
-field: {580C75A8-C01A-4580-83CB-987776CEB3AF}
-name: Key
-key: key
-content-length: 13
-
-Related Posts
 ----version----
 language: en
 version: 1
-revision: 188154eb-767c-4eb0-a45a-be0007375db0
+revision: 4ef0a457-a72a-402c-91d9-389692b260a5
 
 ----field----
-field: {2BA3454A-9A9C-4CDF-A9F8-107FD484EB6E}
-name: Phrase
-key: phrase
-content-length: 13
+field: {754E9622-8E08-4E3F-9B83-EB8D99BBA99C}
+name: Page Title
+key: page title
+content-length: 5
 
-Related Posts
+$name
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -42,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170106T210626Z
+20170117T194933Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-188154eb-767c-4eb0-a45a-be0007375db0
+4ef0a457-a72a-402c-91d9-389692b260a5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170117T192855Z
+20170117T194951Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

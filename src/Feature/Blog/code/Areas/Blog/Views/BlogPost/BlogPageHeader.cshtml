@@ -1,0 +1,14 @@
+﻿@using Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+@model Sitecore.Feature.Blog.Items.PageHeaderItem
+    
+@if (Model != null)
+{
+    <text>
+        <header class="page-header">
+            <h1 class="page-title">@Html.Sitecore().Field(PageHeader.PageTitleFieldIdRaw)</h1>
+            <div class="taxonomy-description">
+                @Html.Sitecore().Field(PageHeader.PageDescriptionFieldIdRaw)
+            </div>
+        </header>
+    </text>
+}

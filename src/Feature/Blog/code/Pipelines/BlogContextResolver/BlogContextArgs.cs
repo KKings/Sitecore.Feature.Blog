@@ -1,6 +1,7 @@
 ﻿namespace Sitecore.Feature.Blog.Pipelines.BlogContextResolver
 {
     using System;
+    using Data.Items;
     using Domain;
     using global::Sitecore.Pipelines;
 
@@ -16,7 +17,13 @@
         /// </summary>
         public virtual BlogContext BlogContext { get; } = new BlogContext();
 
-        public BlogContextArgs(string filePath)
+        /// <summary>
+        /// Gets the Context Item
+        /// <para>Can be null</para>
+        /// </summary>
+        public virtual Item ContextItem { get; }
+
+        public BlogContextArgs(string filePath, Item contextItem)
         {
             if (String.IsNullOrEmpty(filePath))
             {
@@ -24,6 +31,7 @@
             }
 
             this.FilePath = filePath;
+            this.ContextItem = contextItem;
         }
     }
 }

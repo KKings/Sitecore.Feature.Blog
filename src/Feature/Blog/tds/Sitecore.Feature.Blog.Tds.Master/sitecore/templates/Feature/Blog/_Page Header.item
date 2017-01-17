@@ -1,26 +1,40 @@
 ----item----
 version: 1
-id: {46E9E445-62D2-4C6D-B02C-FC750F852D48}
+id: {B5F7CB20-18AE-4D18-95FE-502C69E0320F}
 database: master
-path: /sitecore/templates/Feature/Blog/_Blog Slug/Settings
-parent: {343DF744-B726-480B-954F-D4AB5E08D7D4}
-name: Settings
+path: /sitecore/templates/Feature/Blog/_Page Header
+parent: {8B03E447-D8E9-4FA0-80A6-3F060590BE01}
+name: _Page Header
 master: {00000000-0000-0000-0000-000000000000}
-template: {E269FBB5-3750-427A-9149-7AA950B49301}
-templatekey: Template section
-created: 20170112T182041Z
+template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
+templatekey: Template
+created: 20170117T194512Z
 
+----field----
+field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
+name: __Base template
+key: __base template
+content-length: 38
+
+{1930BBEB-7805-471A-A3BE-4858AC7CF696}
+----field----
+field: {F7D48A55-2158-4F02-9356-756654404F73}
+name: __Standard values
+key: __standard values
+content-length: 38
+
+{AE8CD4CE-E1AB-426E-82DA-C98027B3A2CF}
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
-content-length: 25
+content-length: 20
 
-office/32x32/tool_tip.png
+Office/32x32/jar.png
 ----version----
 language: en
 version: 1
-revision: df83983a-8059-456b-a1eb-06ae348c26be
+revision: 3c756de0-0a94-482a-8048-804720bfbc2e
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -35,21 +49,21 @@ name: __Created
 key: __created
 content-length: 16
 
-20170112T182041Z
+20170117T194512Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-df83983a-8059-456b-a1eb-06ae348c26be
+3c756de0-0a94-482a-8048-804720bfbc2e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170117T171953Z
+20170117T194933Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

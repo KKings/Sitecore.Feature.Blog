@@ -1,4 +1,5 @@
 ﻿@using Sitecore.Feature.Blog.Extensions
+@using Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 @using Sitecore.Mvc
 @model Sitecore.Feature.Blog.Areas.Blog.Models.BlogViewModel
 
@@ -8,16 +9,32 @@
         <article class="post">
             <header class="entry-header">
                 <h2 class="entry-title">
-                    <a href="@Model.Url">
-                        @Model.PostTitle
+                    <a href="@(Sitecore.Context.PageMode.IsNormal ? Model.Url : "")">
+                        @if (Sitecore.Context.PageMode.IsNormal)
+                        {
+                            @Html.Raw(Model.PostTitle)
+                        }
+                        else
+                        {
+                            @Html.Sitecore().Field(BlogPost.PostTitleFieldIdRaw)
+                        }
                     </a>
                 </h2>
             </header>
             <div class="entry-summary">@Html.Raw(Model.Summary)</div>
-            @if (Model.Thumbnail != null)
+            @if (Sitecore.Context.PageMode.IsNormal)
             {
-                <a class="post-thumbnail" href="@Model.Url">
-                    <img src="@Model.Thumbnail.Src" />
+                if (Model.Thumbnail != null && !String.IsNullOrEmpty(Model.Thumbnail.Src))
+                {
+                    <a class="post-thumbnail" href="@Model.Url">
+                        <img src="@Model.Thumbnail.Src" />
+                    </a>
+                }
+            }
+            else
+            {
+                <a href="" class="post-thumbnail">
+                    @Html.Sitecore().Field(BlogPost.ThumbnailFieldIdRaw)
                 </a>
             }
             @if (Model.DisplayBody)
@@ -36,8 +53,18 @@
                 }
                 <span class="posted-on">
                     <span class="screen-reader-text">@Html.Sitecore().Text("Posted On")&nbsp;</span>
-                    <a href="@Model.Url">
-                        <time class="entry-date published">@Model.PublishDate.ToString("MMMM dd, yyyy")</time>
+                    <a href="@(Sitecore.Context.PageMode.IsNormal ? Model.Url : "")">
+                        @if (Sitecore.Context.PageMode.IsNormal)
+                        {
+                            if (Model.PublishDate != DateTime.MinValue)
+                            {
+                                <time class="entry-date published">@Model.PublishDate.ToString("MMMM dd, yyyy")</time>
+                            }
+                        }
+                        else
+                        {
+                            @Html.Sitecore().Field(BlogPost.PublishDateFieldIdRaw)
+                        }
                     </a>
                 </span>
                 @if (Model.Categories.Any())

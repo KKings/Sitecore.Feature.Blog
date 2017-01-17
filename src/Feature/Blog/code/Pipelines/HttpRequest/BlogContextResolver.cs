@@ -28,16 +28,16 @@
             if (args.LocalPath.StartsWith("/sitecore")
                 || args.Url.FilePath.StartsWith("/sitecore")
                 || this.IsRequestForPhysicalFile(args.Url.FilePath)
-                || (Context.Item != null && !Context.Item.IsDerived(Blog.TemplateId)))
+                || (Context.PageMode.IsNormal && Context.Item != null && !Context.Item.IsDerived(Blog.TemplateId)))
             {
                 return;
             }
 
-            var contextResolverArgs = new BlogContextArgs(args.Url.FilePath);
+            var contextResolverArgs = new BlogContextArgs(args.Url.FilePath, Context.Item);
 
             CorePipeline.Run("blog.resolveContext", contextResolverArgs);
 
-            // If we determine tha twe are within a blog, we need to save the context for controllers/views to use later
+            // If we determine that we are within a blog, we need to save the context for controllers/views to use later
             if (contextResolverArgs.BlogContext.IsWithinBlog)
             {
                 this.BlogContextRepository.SaveContext(contextResolverArgs.BlogContext);

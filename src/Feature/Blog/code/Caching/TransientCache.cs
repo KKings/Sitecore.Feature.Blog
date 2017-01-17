@@ -30,7 +30,11 @@
         {
             this.httpContextBase = httpContextBase;
 
-            this.httpContextBase.Items[this.ItemsKey] = new ConcurrentDictionary<string, object>(collection);
+            // The transient cache can become null if used outside of a web request, lucene/solr indexing
+            if (httpContextBase != null)
+            {
+                this.httpContextBase.Items[this.ItemsKey] = new ConcurrentDictionary<string, object>(collection);
+            }
         }
 
         /// <summary>

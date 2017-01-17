@@ -20,7 +20,7 @@
         /// <param name="blogContext">The Blogcontext</param>
         public virtual void SaveContext(BlogContext blogContext)
         {
-            this.transientCache.Set(BlogContextRepository.ContextKey, blogContext);
+            this.transientCache?.Set(BlogContextRepository.ContextKey, blogContext);
         }
 
         /// <summary>
@@ -29,7 +29,7 @@
         /// <returns>The Blog Context</returns>(
         public virtual BlogContext GetContext()
         {
-            return this.transientCache.Get<BlogContext>(BlogContextRepository.ContextKey);
+            return this.transientCache?.Get<BlogContext>(BlogContextRepository.ContextKey) ?? new BlogContext();
         }
     }
 }

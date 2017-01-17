@@ -257,6 +257,43 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 
 	
 	/// <summary>
+	/// PageHeader
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Feature/Blog/_Page Header</para>	
+	/// <para>ID: b5f7cb20-18ae-4d18-95fe-502c69e0320f</para>	
+	/// </summary>
+	public partial class PageHeader 
+	{
+			public const string TemplateIdString = "b5f7cb20-18ae-4d18-95fe-502c69e0320f";
+			public static readonly ID TemplateId = new ID(TemplateIdString);
+			public const string TemplateName = "_Page Header";
+
+			   
+			public const string PageDescriptionFieldIdRaw = "59c2a8de-aabe-4a6e-9ad0-4ccde7e93d8f";
+			public static readonly ID PageDescriptionFieldId = new ID("59c2a8de-aabe-4a6e-9ad0-4ccde7e93d8f");
+			public const string PageDescriptionFieldName = "Page Description";
+			
+			   
+			public const string PageTitleFieldIdRaw = "754e9622-8e08-4e3f-9b83-eb8d99bba99c";
+			public static readonly ID PageTitleFieldId = new ID("754e9622-8e08-4e3f-9b83-eb8d99bba99c");
+			public const string PageTitleFieldName = "Page Title";
+			
+			}
+}
+﻿
+
+
+
+
+
+
+
+
+namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+{
+
+	
+	/// <summary>
 	/// BlogCategory
 	/// <para></para>
 	/// <para>Path: /sitecore/templates/Feature/Blog/Blog Category</para>	
