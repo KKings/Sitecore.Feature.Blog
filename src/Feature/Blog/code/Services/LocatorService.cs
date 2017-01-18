@@ -1,8 +1,11 @@
 ﻿namespace Sitecore.Feature.Blog.Services
 {
     using System.Linq;
+    using Buckets.Extensions;
     using Buckets.Managers;
     using Data.Items;
+    using Extensions;
+    using Sitecore.Feature.Blog.Feature.Blog;
 
     public class LocatorService : ILocatorService
     {
@@ -13,7 +16,12 @@
 
         public virtual Item GetParentBlog(Item item)
         {
-            return item.Axes.GetAncestors().FirstOrDefault(BucketManager.IsBucket) ?? item.Database.GetItem(this.RootPath);         
+            if (item.IsDerived(Blog.TemplateId) && item.IsABucket())
+            {
+                return item;
+            }
+
+            return item?.Axes.GetAncestors().FirstOrDefault(BucketManager.IsBucket) ?? item?.Database.GetItem(this.RootPath);         
         }
     }
 }

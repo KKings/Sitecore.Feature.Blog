@@ -22,7 +22,7 @@
         /// Local Dictionary Cache
         /// <para>Takes into account if the items are cleared</para>
         /// </summary>
-        internal ConcurrentDictionary<string, object> _localCache => this.httpContextBase.Items[this.ItemsKey] as ConcurrentDictionary<string, object> ?? new ConcurrentDictionary<string, object>();
+        internal ConcurrentDictionary<string, object> _localCache => this.httpContextBase?.Items[this.ItemsKey] as ConcurrentDictionary<string, object> ?? new ConcurrentDictionary<string, object>();
 
         public TransientCache(HttpContextBase httpContextBase) : this(httpContextBase, new List<KeyValuePair<string, object>>()) { }
 
