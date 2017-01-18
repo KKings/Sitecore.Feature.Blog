@@ -16,7 +16,7 @@ name: __Base template
 key: __base template
 content-length: 38
 
-{1930BBEB-7805-471A-A3BE-4858AC7CF696}
+{8CA06D6A-B353-44E8-BC31-B528C7306971}
 ----field----
 field: {F7D48A55-2158-4F02-9356-756654404F73}
 name: __Standard values
@@ -34,7 +34,7 @@ Office/32x32/arrow_merge.png
 ----version----
 language: en
 version: 1
-revision: ee86ded4-0759-4f03-b9a6-6e87cd84ca1d
+revision: 62af55dc-b386-40d2-a6c7-d73daa3cb632
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ee86ded4-0759-4f03-b9a6-6e87cd84ca1d
+62af55dc-b386-40d2-a6c7-d73daa3cb632
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170118T185057Z
+20170118T194941Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

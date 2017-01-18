@@ -243,7 +243,7 @@
     <Compile Include="Pipelines\BlogUrlResolver\MapToBlogContext.cs" />
     <Compile Include="Pipelines\BlogUrlResolver\ResolveUrlToContextItem.cs" />
     <Compile Include="Pipelines\HttpRequest\BlogContextResolver.cs" />
-    <Compile Include="Pipelines\RenderRendering\VaryByBlogParameter.cs" />
+    <Compile Include="Pipelines\RenderRendering\GenerateBlogCacheKey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\DefaultDatabaseProvider.cs" />
     <Compile Include="Providers\DefaultIndexProvider.cs" />
