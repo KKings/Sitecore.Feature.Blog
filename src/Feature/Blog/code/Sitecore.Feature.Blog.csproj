@@ -176,6 +176,7 @@
     <Content Include="Areas\Blog\Views\Shared\PaginationViewModel.cshtml" />
     <Content Include="Areas\Blog\Views\BlogPost\BlogPageHeader.cshtml" />
     <Content Include="Areas\Blog\Views\BlogPost\BlogTagCloud.cshtml" />
+    <Content Include="Areas\Blog\Views\BlogPost\BlogRecentPostsListing.cshtml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
@@ -194,6 +195,7 @@
     <Compile Include="Areas\Blog\Models\OpenGraphMetadataViewModel.cs" />
     <Compile Include="Areas\Blog\Models\PageViewModel.cs" />
     <Compile Include="Areas\Blog\Models\PaginationViewModel.cs" />
+    <Compile Include="Areas\Blog\Models\RecentPostsListingViewModel.cs" />
     <Compile Include="Areas\Blog\Models\RelatedPostListingViewModel.cs" />
     <Compile Include="Areas\Blog\Models\TagCloudListingViewModel.cs" />
     <Compile Include="Areas\Blog\Models\TagCloudViewModel.cs" />

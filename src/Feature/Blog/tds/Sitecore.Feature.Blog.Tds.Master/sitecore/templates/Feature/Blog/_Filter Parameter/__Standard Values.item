@@ -1,26 +1,26 @@
 ----item----
 version: 1
-id: {DF3B0F88-C1D6-44F7-9230-D0E4126EC2B3}
+id: {8399F06F-A9A1-4D3C-9439-2D21A2D140F4}
 database: master
-path: /sitecore/templates/Feature/Blog/Blog Listing Parameters/Listing
-parent: {26482946-622B-45CC-991B-23AA148D83DD}
-name: Listing
+path: /sitecore/templates/Feature/Blog/_Filter Parameter/__Standard Values
+parent: {BEB3562C-D9A7-4272-A1D4-22E151F0CD43}
+name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {E269FBB5-3750-427A-9149-7AA950B49301}
-templatekey: Template section
-created: 20170116T165811Z
+template: {BEB3562C-D9A7-4272-A1D4-22E151F0CD43}
+templatekey: _Filter Parameter
+created: 20170118T185021Z
 
 ----field----
-field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
-name: __Icon
-key: __icon
-content-length: 63
+field: {0735FEB1-C8C7-48B0-BEB6-9F7F5B5C06F5}
+name: Posts Per Page
+key: posts per page
+content-length: 2
 
-http://blog.local/temp/iconcache/office/32x32/elements_tree.png
+10
 ----version----
 language: en
 version: 1
-revision: 922f757f-7f0f-4097-8d52-6c0a5ab011a4
+revision: fa75640b-d5ce-4c95-ba24-4e1875214bf6
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -35,21 +35,28 @@ name: __Created
 key: __created
 content-length: 16
 
-20170116T165811Z
+20170118T185021Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-922f757f-7f0f-4097-8d52-6c0a5ab011a4
+fa75640b-d5ce-4c95-ba24-4e1875214bf6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170116T165953Z
+20170118T185024Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -38,6 +38,8 @@
             serviceCollection.AddTransient<IBlogPostService, BlogPostService>();
             serviceCollection.AddTransient<ITagService, TagService>();
             serviceCollection.AddTransient<ICategoryService, CategoryService>();
+
+
             serviceCollection.AddMvcControllersInCurrentAssembly();
         }
     }

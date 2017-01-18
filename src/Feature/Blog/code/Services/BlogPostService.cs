@@ -34,6 +34,35 @@
         }
 
         /// <summary>
+        /// Gets recent blog posts by the <see cref="BlogContext"/> limited to a display count
+        /// </summary>
+        /// <param name="context">The Blog Context</param>
+        /// <param name="display">The number of posts to limit</param>
+        /// <returns>The Results of the query</returns>
+        public virtual SearchResults<BlogPostItem> Recent(BlogContext context, int display)
+        {
+            var query = new SearchQuery<BlogSearchResultItem>
+            {
+                Queries = new ExpressionBuilder<BlogSearchResultItem>()
+                                .IfWhere(context != null, m => m.Paths.Contains(context.Blog))
+                                .Build(),
+                Filters = new ExpressionBuilder<BlogSearchResultItem>().Where(m => m.TemplateId == BlogPost.TemplateId).Build(),
+                Paging = new Paging
+                {
+                    Display = display
+                },
+                Sorts = new[]
+                {
+                    new SortExpression<BlogSearchResultItem>(result => result.PublishDate, SortExpression<BlogSearchResultItem>.Sorting.Descending),
+                }
+            };
+
+            var searchResults = this.repository.Query(query);
+
+            return new SearchResults<BlogPostItem>(searchResults.TotalSearchResults, searchResults.Hits.Select(m => (BlogPostItem)m.Document.GetItem()));
+        }
+
+        /// <summary>
         /// Gets all of the blog posts by the <see cref="BlogContext"/> limited to a display count
         /// </summary>
         /// <param name="context">The Blog Context</param>

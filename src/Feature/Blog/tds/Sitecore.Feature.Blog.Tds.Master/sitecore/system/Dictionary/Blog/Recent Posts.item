@@ -1,20 +1,34 @@
 ----item----
 version: 1
-id: {3482475E-774E-49A4-B70D-42E74DEE15B1}
+id: {6F3940E0-F043-403B-9BFF-95F8C481D572}
 database: master
-path: /sitecore/templates/Feature/Blog/Blog Listing Parameters/__Standard Values
-parent: {26482946-622B-45CC-991B-23AA148D83DD}
-name: __Standard Values
+path: /sitecore/system/Dictionary/Blog/Recent Posts
+parent: {F9442F16-4231-4ABA-B0C0-3E63A666A0BF}
+name: Recent Posts
 master: {00000000-0000-0000-0000-000000000000}
-template: {26482946-622B-45CC-991B-23AA148D83DD}
-templatekey: Blog Listing Parameters
-created: 20170116T165958Z
+template: {6D1CD897-1936-4A3A-A511-289A94C2A7B1}
+templatekey: Dictionary entry
+created: 20170118T185801Z
 
+----field----
+field: {580C75A8-C01A-4580-83CB-987776CEB3AF}
+name: Key
+key: key
+content-length: 12
+
+Recent Posts
 ----version----
 language: en
 version: 1
-revision: c2daf814-6f09-4a01-969f-bc8145df6367
+revision: 915a0202-d5b3-4dc4-993e-25c8454a7e1d
 
+----field----
+field: {2BA3454A-9A9C-4CDF-A9F8-107FD484EB6E}
+name: Phrase
+key: phrase
+content-length: 12
+
+Recent Posts
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -28,7 +42,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170116T165958Z
+20170118T185801Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -42,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c2daf814-6f09-4a01-969f-bc8145df6367
+915a0202-d5b3-4dc4-993e-25c8454a7e1d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170118T185050Z
+20170118T185805Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

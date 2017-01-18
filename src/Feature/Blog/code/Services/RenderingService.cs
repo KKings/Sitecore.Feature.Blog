@@ -35,7 +35,7 @@
 
             var item = this.databaseProvider.Context.GetItem(itemId);
 
-            return item["Phrase"];
+            return (item != null) ? item["Phrase"] : String.Empty;
         }
 
         /// <summary>

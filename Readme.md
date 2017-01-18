@@ -10,7 +10,7 @@ A Sitecore installation package is provided for installing the blog module into 
 
 To extend the blog module, use NuGet to install the Sitecore.Feature.Blog package as a DevDependency:
 
-> TDB Package
+> TBD Package
 
 
 After installation of the package within an environment, to create a blogging area, simply create an item that is derived from the 'Blog' template. All categories, authors, and tags will be managed in a simple Sitecore Item Bucket. 
@@ -32,7 +32,7 @@ Out of the box, the blogging module supports the following tokens:
 * **$category** is mapped to the Category Name of a Category
   * Derived from the _SlugToken_
 * **$year** is mapped to the Post Year of a Post
-* **$$month** is mapped to the Post Month of a Post
+* **$month** is mapped to the Post Month of a Post
 * **$author** is mapped to the Author Full Name
   * Derived from the _SlugToken_
 * **$page** is mapped to an integer to provide pagination support
@@ -71,8 +71,8 @@ Out of the box, the blogging module supports the following tokens:
           <token>$page</token>
         </token>
       </tokens>
-    <blog>
-  <sitecore>
+    </blog>
+  </sitecore>
 </configuration>
 ```
 

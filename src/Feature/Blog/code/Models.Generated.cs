@@ -84,8 +84,8 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 			public const string TemplateName = "Blog Listing Parameters";
 
 			   
-			public const string PostsPerPageFieldIdRaw = "68b3edfb-41a4-4914-93f5-c21fdcdbeed0";
-			public static readonly ID PostsPerPageFieldId = new ID("68b3edfb-41a4-4914-93f5-c21fdcdbeed0");
+			public const string PostsPerPageFieldIdRaw = "0735feb1-c8c7-48b0-beb6-9f7f5b5c06f5";
+			public static readonly ID PostsPerPageFieldId = new ID("0735feb1-c8c7-48b0-beb6-9f7f5b5c06f5");
 			public const string PostsPerPageFieldName = "Posts Per Page";
 			
 			}
@@ -213,6 +213,43 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 			public const string PageTitleFieldIdRaw = "754e9622-8e08-4e3f-9b83-eb8d99bba99c";
 			public static readonly ID PageTitleFieldId = new ID("754e9622-8e08-4e3f-9b83-eb8d99bba99c");
 			public const string PageTitleFieldName = "Page Title";
+			
+			}
+}
+﻿
+
+
+
+
+
+
+
+
+namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+{
+
+	
+	/// <summary>
+	/// RecentListingParameters
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Feature/Blog/Recent Listing Parameters</para>	
+	/// <para>ID: 8aa54159-bc1f-40fa-b050-53fea1dda654</para>	
+	/// </summary>
+	public partial class RecentListingParameters 
+	{
+			public const string TemplateIdString = "8aa54159-bc1f-40fa-b050-53fea1dda654";
+			public static readonly ID TemplateId = new ID(TemplateIdString);
+			public const string TemplateName = "Recent Listing Parameters";
+
+			   
+			public const string RenderingTitleFieldIdRaw = "bed1685e-527f-4c77-a359-fd18b37bf820";
+			public static readonly ID RenderingTitleFieldId = new ID("bed1685e-527f-4c77-a359-fd18b37bf820");
+			public const string RenderingTitleFieldName = "Rendering Title";
+			
+			   
+			public const string PostsPerPageFieldIdRaw = "0735feb1-c8c7-48b0-beb6-9f7f5b5c06f5";
+			public static readonly ID PostsPerPageFieldId = new ID("0735feb1-c8c7-48b0-beb6-9f7f5b5c06f5");
+			public const string PostsPerPageFieldName = "Posts Per Page";
 			
 			}
 }
@@ -416,6 +453,38 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 			public const string SlugFieldIdRaw = "8e301bcf-11ae-40bd-9465-4ca58351c8f6";
 			public static readonly ID SlugFieldId = new ID("8e301bcf-11ae-40bd-9465-4ca58351c8f6");
 			public const string SlugFieldName = "Slug";
+			
+			}
+}
+﻿
+
+
+
+
+
+
+
+
+namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+{
+
+	
+	/// <summary>
+	/// FilterParameter
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Feature/Blog/_Filter Parameter</para>	
+	/// <para>ID: beb3562c-d9a7-4272-a1d4-22e151f0cd43</para>	
+	/// </summary>
+	public partial class FilterParameter 
+	{
+			public const string TemplateIdString = "beb3562c-d9a7-4272-a1d4-22e151f0cd43";
+			public static readonly ID TemplateId = new ID(TemplateIdString);
+			public const string TemplateName = "_Filter Parameter";
+
+			   
+			public const string PostsPerPageFieldIdRaw = "0735feb1-c8c7-48b0-beb6-9f7f5b5c06f5";
+			public static readonly ID PostsPerPageFieldId = new ID("0735feb1-c8c7-48b0-beb6-9f7f5b5c06f5");
+			public const string PostsPerPageFieldName = "Posts Per Page";
 			
 			}
 }

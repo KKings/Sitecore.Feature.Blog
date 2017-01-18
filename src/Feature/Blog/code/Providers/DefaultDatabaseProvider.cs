@@ -1,7 +1,6 @@
 ﻿namespace Sitecore.Feature.Blog.Providers
 {
     using Abstractions;
-    using Configuration;
     using Data;
 
     public class DefaultDatabaseProvider : IDatabaseProvider

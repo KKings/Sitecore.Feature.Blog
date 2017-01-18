@@ -1,0 +1,22 @@
+﻿@model Sitecore.Feature.Blog.Areas.Blog.Models.RecentPostsListingViewModel
+    
+
+@if (Model != null && Model.Posts.Any())
+{
+    <text>
+        <div class="widget widget-posts">
+            <h2>@Model.Title</h2>
+            <ul>
+                @foreach (var post in Model.Posts)
+                {
+                    <text>
+                        <li class="post-item">
+                            <a href="@post.Url">@post.Title</a>
+                        </li>
+                    </text>
+                }
+            </ul>
+        </div>
+    </text>
+}
+

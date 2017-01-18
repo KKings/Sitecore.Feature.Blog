@@ -172,5 +172,20 @@
 
             return this.View(viewModel);
         }
+
+        /// <summary>
+        /// Renders the Recent Posts Listing
+        /// </summary>
+        public virtual ActionResult BlogRecentPostsListing()
+        {
+            var blogContext = this.contextRepository.GetContext();
+            var postsPerPage = this.renderingService.PostsPerPage(Mvc.Presentation.RenderingContext.CurrentOrNull);
+            var title = this.renderingService.GetTitle(Mvc.Presentation.RenderingContext.CurrentOrNull);
+            var posts = this.blogPostService.Recent(blogContext, postsPerPage);
+
+            var viewModel = new RecentPostsListingViewModel(title, posts.Results);
+
+            return this.View(viewModel);
+        }
     }
 }

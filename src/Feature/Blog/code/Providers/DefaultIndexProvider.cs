@@ -1,5 +1,4 @@
-﻿
-namespace Sitecore.Feature.Blog.Providers
+﻿namespace Sitecore.Feature.Blog.Providers
 {
     using ContentSearch;
     using System;
@@ -38,10 +37,9 @@ namespace Sitecore.Feature.Blog.Providers
         }
 
         /// <summary>
-        /// 
+        /// Index Lookup
         /// </summary>
-        public virtual IDictionary<string, string> IndexLookup
-            => new Dictionary<string, string> { { "master", "sitecore_master_index" }, { "web", "sitecore_web_index" } };
+        public virtual IDictionary<string, string> IndexLookup => new Dictionary<string, string> { { "master", "sitecore_master_index" }, { "web", "sitecore_web_index" } };
 
         /// <summary>
         /// Database Provider Implementation for finding the correct Database
