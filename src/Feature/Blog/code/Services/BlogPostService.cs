@@ -117,8 +117,9 @@
         /// Gets all posts relating to a Blog Post
         /// </summary>
         /// <param name="postItem">The Blog Post</param>
+        /// <param name="display">The number of posts to limit</param>
         /// <returns>The Results</returns>
-        public virtual SearchResults<BlogPostItem> Related(BlogPostItem postItem)
+        public virtual SearchResults<BlogPostItem> Related(BlogPostItem postItem, int display)
         {
             var categories = postItem.Categories;
             var tags = postItem.Tags;
@@ -139,7 +140,7 @@
                 Filters = new ExpressionBuilder<BlogSearchResultItem>().Where(m => m.TemplateId == BlogPost.TemplateId).Build(),
                 Paging = new Paging
                 {
-                    Display = 4
+                    Display = display
                 }
             };
 

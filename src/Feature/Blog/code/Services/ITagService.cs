@@ -7,5 +7,7 @@ namespace Sitecore.Feature.Blog.Services
     public interface ITagService
     {
         IEnumerable<TagItem> All(BlogContext context);
+
+        IEnumerable<TagItem> AllCloud(BlogContext context);
     }
 }

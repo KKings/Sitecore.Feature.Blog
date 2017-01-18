@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    public class TagsListingViewModel
+    public class TagCloudListingViewModel
     {
         /// <summary>
         /// Gets the Rendering Title
@@ -13,9 +13,9 @@
         /// <summary>
         /// Gets the Url/Tag Pairs
         /// </summary>
-        public IEnumerable<TagViewModel> Tags { get; private set; }
+        public IEnumerable<TagCloudViewModel> Tags { get; private set; }
 
-        public TagsListingViewModel(string title, IEnumerable<TagViewModel> tags)
+        public TagCloudListingViewModel(string title, IEnumerable<TagCloudViewModel> tags)
         {
             if (tags == null)
             {

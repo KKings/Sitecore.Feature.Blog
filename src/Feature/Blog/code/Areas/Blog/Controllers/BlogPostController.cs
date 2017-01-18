@@ -73,7 +73,7 @@
         {
             var blogPost = (BlogPostItem)Mvc.Presentation.RenderingContext.Current.ContextItem;
             var title = this.renderingService.GetTitle(Mvc.Presentation.RenderingContext.CurrentOrNull);
-            var posts = this.blogPostService.Related(blogPost);
+            var posts = this.blogPostService.Related(blogPost, 3);
 
             var viewModel = new RelatedPostListingViewModel(title, posts.Results);
             return this.View(viewModel);
@@ -117,7 +117,6 @@
         /// <summary>
         /// Renders the Blog Tags Listing
         /// </summary>
-        /// <returns></returns>
         public virtual ActionResult BlogTagsListing()
         {
             var blogContext = this.contextRepository.GetContext();
@@ -157,6 +156,21 @@
             var pageHeaderItem = (PageHeaderItem)Mvc.Presentation.RenderingContext.Current.ContextItem;
 
             return this.View(pageHeaderItem);
+        }
+
+        /// <summary>
+        /// Renders the Tag Cloud
+        /// </summary>
+        public virtual ActionResult BlogTagCloud()
+        {
+            var blogContext = this.contextRepository.GetContext();
+            var title = this.renderingService.GetTitle(Mvc.Presentation.RenderingContext.CurrentOrNull);
+
+            var tags = this.tagService.AllCloud(blogContext);
+
+            var viewModel = new TagCloudListingViewModel(title, tags.Select(tag => new TagCloudViewModel(tag.Weight, tag.TagName, tag.Url)));
+
+            return this.View(viewModel);
         }
     }
 }

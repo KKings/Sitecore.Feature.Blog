@@ -3,7 +3,8 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Example Blog Layout</title>
+<title>Example Blog Layout</title>
+    <link rel="stylesheet" id="twentysixteen-fonts-css" href="https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext" type="text/css" media="all">
     <style>
         /**
 
@@ -12,10 +13,7 @@
 */
 
         article.post { overflow: hidden;margin-bottom: 2.5em; }
-        .widget-tags ul { margin: 0; }
-        .widget-tags li {
-            display: inline-block;
-        }
+
         .related-post-items { clear: both; }
         .related-post-title { margin-bottom: 16px; }
         .related-post-item {
@@ -26,7 +24,19 @@
         .related-post-items .related-post-item:last-child { margin-right: 0}
         .related-post-item a {margin-bottom: 16px;}
 /* Tag Cloud (WP.COM) widget */
-.widget-tags a {
+.widget-tags ul,
+.widget-tag-cloud ul {
+     margin: 0;
+}
+.widget-tag-cloud ul {
+    text-align: center;
+}
+.widget-tags li,
+.widget-tag-cloud li {
+    display: inline-block;
+}
+.widget-tags a,
+.widget-tag-cloud a {
 	border: 1px solid #d1d1d1;
 	border-radius: 2px;
 	display: inline-block;
@@ -38,12 +48,28 @@
 }
 
 .widget-tags a:hover,
-.widget-tags a:focus {
+.widget-tags a:focus,
+.widget-tag-cloud a:hover,
+.widget-tag-cloud a:focus {
 	border-color: #007acc;
 	color: #007acc;
 	outline: 0;
 }
-
+.tag-weight-1 {
+    font-size: 0.8em;
+}
+.tag-weight-2 {
+    font-size: 1em;
+}
+.tag-weight-3 {
+    font-size: 1.2em;
+}
+.tag-weight-4 {
+    font-size: 1.35em;
+}
+.tag-weight-5 {
+    font-size: 1.5em;
+}
 /* IE8 and below use EOT and allow cross-site embedding. 
    IE9 uses WOFF which is base64 encoded to allow cross-site embedding.
    So unfortunately, IE9 will throw a console error, but it'll still work.

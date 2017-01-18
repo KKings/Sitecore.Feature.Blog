@@ -11,6 +11,6 @@ namespace Sitecore.Feature.Blog.Services
 
         IEnumerable<Archive> Archives(BlogContext context);
 
-        SearchResults<BlogPostItem> Related(BlogPostItem postItem);
+        SearchResults<BlogPostItem> Related(BlogPostItem postItem, int display);
     }
 }

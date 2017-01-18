@@ -8,8 +8,9 @@
 
     public class TagItem : CustomItem
     {
-        public TagItem(Item innerItem) : base(innerItem) { }
+        public int Weight { get; set; } = 0;
 
+        public TagItem(Item innerItem) : base(innerItem) { }
 
         /// <summary>
         /// Convert an <see cref="Item"/> to a <see cref="AuthorItem"/>

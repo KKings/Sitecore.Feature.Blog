@@ -1,0 +1,21 @@
+﻿@model Sitecore.Feature.Blog.Areas.Blog.Models.TagCloudListingViewModel
+    
+@if (Model != null && Model.Tags.Any())
+{
+    <text>
+        <div class="widget widget-tag-cloud">
+            <h2>@Model.Title</h2>
+            <ul>
+                @foreach (var tag in Model.Tags)
+                {
+                    <text>
+                        <li class="tag-item tag-@tag.Name tag-weight-@tag.Weight">
+                            <a href="@tag.Url">@tag.Name</a>
+                        </li>
+                    </text>
+                }
+            </ul>
+        </div>
+    </text>
+}
+

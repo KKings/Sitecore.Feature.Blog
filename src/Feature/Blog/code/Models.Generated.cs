@@ -204,6 +204,16 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 			public static readonly ID SlugFieldId = new ID("8e301bcf-11ae-40bd-9465-4ca58351c8f6");
 			public const string SlugFieldName = "Slug";
 			
+			   
+			public const string PageDescriptionFieldIdRaw = "59c2a8de-aabe-4a6e-9ad0-4ccde7e93d8f";
+			public static readonly ID PageDescriptionFieldId = new ID("59c2a8de-aabe-4a6e-9ad0-4ccde7e93d8f");
+			public const string PageDescriptionFieldName = "Page Description";
+			
+			   
+			public const string PageTitleFieldIdRaw = "754e9622-8e08-4e3f-9b83-eb8d99bba99c";
+			public static readonly ID PageTitleFieldId = new ID("754e9622-8e08-4e3f-9b83-eb8d99bba99c");
+			public const string PageTitleFieldName = "Page Title";
+			
 			}
 }
 ﻿
@@ -240,6 +250,16 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 			public const string SlugFieldIdRaw = "8e301bcf-11ae-40bd-9465-4ca58351c8f6";
 			public static readonly ID SlugFieldId = new ID("8e301bcf-11ae-40bd-9465-4ca58351c8f6");
 			public const string SlugFieldName = "Slug";
+			
+			   
+			public const string PageDescriptionFieldIdRaw = "59c2a8de-aabe-4a6e-9ad0-4ccde7e93d8f";
+			public static readonly ID PageDescriptionFieldId = new ID("59c2a8de-aabe-4a6e-9ad0-4ccde7e93d8f");
+			public const string PageDescriptionFieldName = "Page Description";
+			
+			   
+			public const string PageTitleFieldIdRaw = "754e9622-8e08-4e3f-9b83-eb8d99bba99c";
+			public static readonly ID PageTitleFieldId = new ID("754e9622-8e08-4e3f-9b83-eb8d99bba99c");
+			public const string PageTitleFieldName = "Page Title";
 			
 			}
 }
@@ -314,6 +334,16 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 			public const string SlugFieldIdRaw = "8e301bcf-11ae-40bd-9465-4ca58351c8f6";
 			public static readonly ID SlugFieldId = new ID("8e301bcf-11ae-40bd-9465-4ca58351c8f6");
 			public const string SlugFieldName = "Slug";
+			
+			   
+			public const string PageDescriptionFieldIdRaw = "59c2a8de-aabe-4a6e-9ad0-4ccde7e93d8f";
+			public static readonly ID PageDescriptionFieldId = new ID("59c2a8de-aabe-4a6e-9ad0-4ccde7e93d8f");
+			public const string PageDescriptionFieldName = "Page Description";
+			
+			   
+			public const string PageTitleFieldIdRaw = "754e9622-8e08-4e3f-9b83-eb8d99bba99c";
+			public static readonly ID PageTitleFieldId = new ID("754e9622-8e08-4e3f-9b83-eb8d99bba99c");
+			public const string PageTitleFieldName = "Page Title";
 			
 			}
 }
@@ -468,5 +498,15 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Blog";
 
+			   
+			public const string PageDescriptionFieldIdRaw = "59c2a8de-aabe-4a6e-9ad0-4ccde7e93d8f";
+			public static readonly ID PageDescriptionFieldId = new ID("59c2a8de-aabe-4a6e-9ad0-4ccde7e93d8f");
+			public const string PageDescriptionFieldName = "Page Description";
+			
+			   
+			public const string PageTitleFieldIdRaw = "754e9622-8e08-4e3f-9b83-eb8d99bba99c";
+			public static readonly ID PageTitleFieldId = new ID("754e9622-8e08-4e3f-9b83-eb8d99bba99c");
+			public const string PageTitleFieldName = "Page Title";
+			
 			}
 }
