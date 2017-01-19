@@ -30,7 +30,7 @@ public static string GetNamespace(string defaultNamespace, SitecoreItem item, bo
 	namespaceSegments.Add(item.Namespace);
 	string @namespace = AsNamespace(namespaceSegments); // use an extension method in the supporting assembly
 
-	return (includeGlobal ? string.Concat("global::", @namespace) : @namespace).Replace(".sitecore.templates", "").Replace("_", "");
+	return (includeGlobal ? string.Concat("global::", @namespace) : @namespace).Replace(".sitecore.templates", "").Replace(".Models.Feature.Blog", ".Models").Replace("_", "");
 }
 
 /// <summary>

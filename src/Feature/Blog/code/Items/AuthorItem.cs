@@ -5,7 +5,7 @@ namespace Sitecore.Feature.Blog.Items
     using Data.Managers;
     using Domain;
     using Extensions;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
 
     public class AuthorItem : CustomItem
     {

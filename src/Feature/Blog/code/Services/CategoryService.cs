@@ -7,7 +7,7 @@
     using Repositories;
     using Search;
     using Search.Results;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
 
     public class CategoryService : ICategoryService
     {

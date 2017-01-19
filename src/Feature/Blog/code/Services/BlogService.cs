@@ -6,7 +6,7 @@
     using Extensions;
     using Items;
     using Providers;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
 
     public class BlogService : IBlogService
     {

@@ -4,7 +4,7 @@
     using Data.Items;
     using Data.Managers;
     using Extensions;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
 
     public class TagItem : CustomItem
     {

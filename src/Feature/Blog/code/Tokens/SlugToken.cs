@@ -5,7 +5,7 @@
     using ContentSearch.SearchTypes;
     using Data.Items;
     using Domain;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
 
     public class SlugToken : IToken
     {

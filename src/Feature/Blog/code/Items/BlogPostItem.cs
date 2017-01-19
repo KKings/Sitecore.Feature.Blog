@@ -7,7 +7,7 @@
     using Data.Managers;
     using Domain;
     using Extensions;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
 
     public class BlogPostItem : CustomItem
     {

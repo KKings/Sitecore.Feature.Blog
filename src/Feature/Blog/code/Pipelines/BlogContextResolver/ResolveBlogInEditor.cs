@@ -4,7 +4,7 @@
     using Extensions;
     using Microsoft.Extensions.DependencyInjection;
     using Services;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
 
     public class ResolveBlogInEditor
     {

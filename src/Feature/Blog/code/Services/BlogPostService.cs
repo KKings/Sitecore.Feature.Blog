@@ -11,7 +11,7 @@
     using Resolvers;
     using Search;
     using Search.Results;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
     using StringExtensions;
 
     public class BlogPostService : IBlogPostService

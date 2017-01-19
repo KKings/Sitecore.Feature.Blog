@@ -4,10 +4,10 @@
     using Data.Items;
     using Diagnostics;
     using Extensions;
-    using global::Sitecore.Events;
-    using global::Sitecore.Pipelines;
+    using Sitecore.Events;
+    using Sitecore.Pipelines;
     using Pipelines.BlogGenerateSlug;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
 
     public class BlogSlugSavingEvent
     {

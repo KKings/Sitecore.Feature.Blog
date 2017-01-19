@@ -6,7 +6,7 @@
     using ContentSearch.ComputedFields;
     using Extensions;
     using Items;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
 
     public class BlogArchiveYear : IComputedIndexField
     {

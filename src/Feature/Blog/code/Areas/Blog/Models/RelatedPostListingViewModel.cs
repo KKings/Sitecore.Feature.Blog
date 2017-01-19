@@ -5,8 +5,14 @@
 
     public class RelatedPostListingViewModel
     {
+        /// <summary>
+        /// Gets the Title
+        /// </summary>
         public string Title { get; private set; }
 
+        /// <summary>
+        /// Gets the Posts
+        /// </summary>
         public IEnumerable<BlogPostItem> Posts { get; private set; }
 
         public RelatedPostListingViewModel(string title, IEnumerable<BlogPostItem> posts)

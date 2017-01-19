@@ -2,7 +2,7 @@
 {
     using Data.Items;
     using Data.Managers;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
 
     public class PageHeaderItem : CustomItem
     {

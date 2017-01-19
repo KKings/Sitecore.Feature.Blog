@@ -9,7 +9,7 @@
     using Microsoft.Extensions.DependencyInjection;
     using Pipelines.BlogContextResolver;
     using Repositories;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
 
     public class BlogContextResolver : HttpRequestProcessor
     {

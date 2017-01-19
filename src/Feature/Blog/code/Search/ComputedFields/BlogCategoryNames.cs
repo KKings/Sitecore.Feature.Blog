@@ -5,7 +5,7 @@ namespace Sitecore.Feature.Blog.Search.ComputedFields
     using ContentSearch.ComputedFields;
     using Extensions;
     using Items;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
     using System.Linq;
 
     public class BlogCategoryNames : IComputedIndexField

@@ -27,7 +27,7 @@
     <FieldsForCodeGen>Title,Blob,Shared,Unversioned,Default value,Validation,ValidationText,__Long description,__Short description,__Display name,__Hidden,__Read Only,__Sortorder</FieldsForCodeGen>
     <CodeGenTargetProject>Sitecore.Feature.Blog</CodeGenTargetProject>
     <CodeGenFile>Models.Generated.cs</CodeGenFile>
-    <BaseNamespace>Sitecore.Feature.Blog</BaseNamespace>
+    <BaseNamespace>Models</BaseNamespace>
     <BaseTransformFile>glassv3item.tt</BaseTransformFile>
     <HeaderTransformFile>glassv3header.tt</HeaderTransformFile>
   </PropertyGroup>

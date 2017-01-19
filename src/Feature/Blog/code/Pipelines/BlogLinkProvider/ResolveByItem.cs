@@ -8,7 +8,7 @@ namespace Sitecore.Feature.Blog.Pipelines.BlogLinkProvider
     using Microsoft.Extensions.DependencyInjection;
     using Resolvers;
     using Services;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
 
     public class ResolveByItem
     {

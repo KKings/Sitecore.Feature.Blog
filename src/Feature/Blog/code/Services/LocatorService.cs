@@ -5,7 +5,7 @@
     using Buckets.Managers;
     using Data.Items;
     using Extensions;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
 
     public class LocatorService : ILocatorService
     {

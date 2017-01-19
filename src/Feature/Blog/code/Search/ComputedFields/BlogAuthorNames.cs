@@ -9,7 +9,7 @@ namespace Sitecore.Feature.Blog.Search.ComputedFields
     using ContentSearch.ComputedFields;
     using Extensions;
     using Items;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
 
     public class BlogAuthorNames : IComputedIndexField
     {

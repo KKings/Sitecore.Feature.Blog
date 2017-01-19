@@ -2,7 +2,7 @@
 {
     using System;
     using Extensions;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
 
     public class BlogTagSlugGenerator : SlugGenerator
     {

@@ -35,7 +35,7 @@ using Sitecore.Data;
 
 
 
-namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+namespace Sitecore.Feature.Blog.Models
 {
 
 	
@@ -67,7 +67,7 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 
 
 
-namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+namespace Sitecore.Feature.Blog.Models
 {
 
 	
@@ -99,7 +99,7 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 
 
 
-namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+namespace Sitecore.Feature.Blog.Models
 {
 
 	
@@ -131,7 +131,7 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 
 
 
-namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+namespace Sitecore.Feature.Blog.Models
 {
 
 	
@@ -163,7 +163,7 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 
 
 
-namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+namespace Sitecore.Feature.Blog.Models
 {
 
 	
@@ -225,7 +225,7 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 
 
 
-namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+namespace Sitecore.Feature.Blog.Models
 {
 
 	
@@ -262,7 +262,7 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 
 
 
-namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+namespace Sitecore.Feature.Blog.Models
 {
 
 	
@@ -309,7 +309,7 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 
 
 
-namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+namespace Sitecore.Feature.Blog.Models
 {
 
 	
@@ -346,7 +346,7 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 
 
 
-namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+namespace Sitecore.Feature.Blog.Models
 {
 
 	
@@ -393,7 +393,7 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 
 
 
-namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+namespace Sitecore.Feature.Blog.Models
 {
 
 	
@@ -465,7 +465,7 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 
 
 
-namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+namespace Sitecore.Feature.Blog.Models
 {
 
 	
@@ -497,7 +497,7 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 
 
 
-namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+namespace Sitecore.Feature.Blog.Models
 {
 
 	
@@ -524,7 +524,7 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 
 
 
-namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+namespace Sitecore.Feature.Blog.Models
 {
 
 	
@@ -551,7 +551,7 @@ namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
 
 
 
-namespace Sitecore.Feature.Blog.Sitecore.Feature.Blog.Feature.Blog
+namespace Sitecore.Feature.Blog.Models
 {
 
 	

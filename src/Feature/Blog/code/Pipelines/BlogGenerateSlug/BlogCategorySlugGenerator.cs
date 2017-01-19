@@ -3,7 +3,7 @@ namespace Sitecore.Feature.Blog.Pipelines.BlogGenerateSlug
 {
     using System;
     using Extensions;
-    using Sitecore.Feature.Blog.Feature.Blog;
+    using Models;
 
     public class BlogCategorySlugGenerator : SlugGenerator
     {
