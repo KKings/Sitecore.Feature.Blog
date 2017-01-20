@@ -1,5 +1,4 @@
-﻿
-namespace Sitecore.Feature.Blog.Pipelines.BlogLinkProvider
+﻿namespace Sitecore.Feature.Blog.Pipelines.BlogLinkProvider
 {
     using System;
     using DependencyInjection;
@@ -12,8 +11,14 @@ namespace Sitecore.Feature.Blog.Pipelines.BlogLinkProvider
 
     public class ResolveByItem
     {
+        /// <summary>
+        /// The resolver service
+        /// </summary>
         public virtual IResolverService ResolverService { get { return ServiceLocator.ServiceProvider.GetService<IResolverService>(); } }
 
+        /// <summary>
+        /// The locator service
+        /// </summary>
         public virtual ILocatorService LocatorService { get { return ServiceLocator.ServiceProvider.GetService<ILocatorService>(); } }
 
         public void Process(BlogLinkProviderArgs args)

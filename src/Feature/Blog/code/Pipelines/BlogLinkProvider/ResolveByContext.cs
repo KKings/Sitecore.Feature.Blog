@@ -1,13 +1,15 @@
-﻿
-namespace Sitecore.Feature.Blog.Pipelines.BlogLinkProvider
+﻿namespace Sitecore.Feature.Blog.Pipelines.BlogLinkProvider
 {
     using DependencyInjection;
-    using global::Sitecore.Links;
+    using Sitecore.Links;
     using Microsoft.Extensions.DependencyInjection;
     using Services;
 
     public class ResolveByContext
     {
+        /// <summary>
+        /// The locator service
+        /// </summary>
         public virtual ILocatorService LocatorService { get { return ServiceLocator.ServiceProvider.GetService<ILocatorService>(); } }
 
         public void Process(BlogLinkProviderArgs args)

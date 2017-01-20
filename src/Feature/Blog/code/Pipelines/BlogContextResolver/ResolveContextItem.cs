@@ -10,6 +10,7 @@
             if (Context.Item != null)
             {
                 args.AbortPipeline();
+                return;
             }
 
             const string pipeline = "blog.resolveUrl";

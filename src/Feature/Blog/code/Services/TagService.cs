@@ -51,7 +51,7 @@
                                 .IfWhere(context != null, m => m.Paths.Contains(context.Blog))
                                 .Build(),
                 Filters = new ExpressionBuilder<TagSearchResultItem>()
-                                .Where(result => result.TemplateId == BlogTag.TemplateId)
+                                .Where(result => result.TemplateIds.Contains(BlogTag.TemplateId))
                                 .Where(result => result.Name != "__Standard Values")
                                 .Build(),
                 Sorts = new[]
@@ -77,7 +77,7 @@
                     .IfWhere(context != null, m => m.Paths.Contains(context.Blog))
                     .Build(),
                 Filters = new ExpressionBuilder<BlogSearchResultItem>()
-                    .Where(result => result.TemplateId == BlogPost.TemplateId)
+                    .Where(result => result.TemplateIds.Contains(BlogPost.TemplateId))
                     .Where(result => result.Name != "__Standard Values")
                     .Build()
             };
@@ -86,7 +86,7 @@
 
             var facet = searchResults.Categories.FirstOrDefault(m => m.Name == "tags");
 
-            if (facet == null)
+            if (facet == null || !facet.Values.Any())
             {
                 return new TagItem[0];
             }

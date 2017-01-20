@@ -1,20 +1,27 @@
 ﻿@model Sitecore.Feature.Blog.Areas.Blog.Models.ArchivesListingViewModel
 
-@if (Model != null && Model.Archives.Any())
+@if (Model != null)
 {
     <text>
         <div class="widget widget-archives">
             <h2>@Model.Title</h2>
-            <ul>
-                @foreach (var archive in Model.Archives)
-                {
-                    <text>
-                        <li>
-                            <a href="@archive.Url">@archive.Title</a>
-                        </li>
-                    </text>
-                }
-            </ul>
+            @if (Model.Archives.Any())
+            {
+                <ul>
+                    @foreach (var archive in Model.Archives)
+                    {
+                        <text>
+                            <li>
+                                <a href="@archive.Url">@archive.Title</a>
+                            </li>
+                        </text>
+                    }
+                </ul>
+            }
+            else if (Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                <p>No archives have been found for this blog.</p>
+            }
         </div>
     </text>
 }

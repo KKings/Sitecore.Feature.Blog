@@ -1,7 +1,6 @@
 ﻿namespace Sitecore.Feature.Blog.Search.Results
 {
     using ContentSearch;
-    using ContentSearch.SearchTypes;
 
     public class TagSearchResultItem : SearchResultItem
     {

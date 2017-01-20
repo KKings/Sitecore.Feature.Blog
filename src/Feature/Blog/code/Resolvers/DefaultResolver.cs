@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using ContentSearch.SearchTypes;
     using Data;
     using Data.Items;
     using Domain;
@@ -11,6 +10,7 @@
     using Providers;
     using Repositories;
     using Search;
+    using Search.Results;
     using Tokens;
 
     public class DefaultResolver : IResolver
@@ -130,7 +130,7 @@
             }
 
             builder.Where(r => r.Paths.Contains(blogContext.Blog))
-                   .IfWhere(!String.IsNullOrEmpty(this.Template), r => r.TemplateId == this.TemplateId);
+                   .IfWhere(!String.IsNullOrEmpty(this.Template), r => r.TemplateIds.Contains(this.TemplateId));
 
             var query = new SearchQuery<SearchResultItem>
             {

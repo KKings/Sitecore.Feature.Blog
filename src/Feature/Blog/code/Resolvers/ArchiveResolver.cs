@@ -1,11 +1,11 @@
 ﻿namespace Sitecore.Feature.Blog.Resolvers
 {
     using System.Collections.Generic;
-    using ContentSearch.SearchTypes;
     using Data.Items;
     using Domain;
     using Providers;
     using Repositories;
+    using Search.Results;
     using Tokens;
 
     public class ArchiveResolver : DefaultResolver

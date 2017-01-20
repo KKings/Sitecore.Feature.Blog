@@ -46,7 +46,7 @@
                 Queries = new ExpressionBuilder<BlogSearchResultItem>()
                                 .IfWhere(context != null, m => m.Paths.Contains(context.Blog))
                                 .Build(),
-                Filters = new ExpressionBuilder<BlogSearchResultItem>().Where(m => m.TemplateId == BlogPost.TemplateId).Build(),
+                Filters = new ExpressionBuilder<BlogSearchResultItem>().Where(m => m.TemplateIds.Contains(BlogPost.TemplateId)).Build(),
                 Paging = new Paging
                 {
                     Display = display
@@ -79,7 +79,7 @@
                                 .IfWhere(context != null && !context.AuthorName.IsNullOrEmpty(), m => m.AuthorSlugs.Contains(context.AuthorName))
                                 .IfWhere(context != null && !context.CategoryName.IsNullOrEmpty(), m => m.CategorySlugs.Contains(context.CategoryName))
                                 .IfWhere(context != null && !context.TagName.IsNullOrEmpty(), m => m.TagSlugs.Contains(context.TagName)).Build(),
-                Filters = new ExpressionBuilder<BlogSearchResultItem>().Where(m => m.TemplateId == BlogPost.TemplateId).Build(),
+                Filters = new ExpressionBuilder<BlogSearchResultItem>().Where(m => m.TemplateIds.Contains(BlogPost.TemplateId)).Build(),
                 Paging = new Paging
                 {
                     PageMode = PageMode.Pager,
@@ -115,7 +115,7 @@
                     .Where(m => m.Paths.Contains(context.Blog))
                     .Where(result => result.ArchiveFacet != "unknown")
                     .Build(),
-                Filters = new ExpressionBuilder<BlogSearchResultItem>().Where(m => m.TemplateId == BlogPost.TemplateId).Build()
+                Filters = new ExpressionBuilder<BlogSearchResultItem>().Where(m => m.TemplateIds.Contains(BlogPost.TemplateId)).Build()
             };
 
             var results = this.repository.Facet(searchQuery, m => m.ArchiveFacet);
@@ -166,7 +166,7 @@
                         .IfAny(tags.Any(), tags.Select(item => item.ID),                (result, id) => result.Tags.Contains(id))
                         .IfOrAny(categories.Any(), categories.Select(item => item.ID),  (result, id) => result.Categories.Contains(id)))
                     .Build(),
-                Filters = new ExpressionBuilder<BlogSearchResultItem>().Where(m => m.TemplateId == BlogPost.TemplateId).Build(),
+                Filters = new ExpressionBuilder<BlogSearchResultItem>().Where(m => m.TemplateIds.Contains(BlogPost.TemplateId)).Build(),
                 Paging = new Paging
                 {
                     Display = display

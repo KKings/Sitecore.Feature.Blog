@@ -1,21 +1,27 @@
 ﻿@model Sitecore.Feature.Blog.Areas.Blog.Models.RecentPostsListingViewModel
     
-
-@if (Model != null && Model.Posts.Any())
+@if (Model != null)
 {
     <text>
         <div class="widget widget-posts">
             <h2>@Model.Title</h2>
-            <ul>
-                @foreach (var post in Model.Posts)
-                {
-                    <text>
-                        <li class="post-item">
-                            <a href="@post.Url">@post.Title</a>
-                        </li>
-                    </text>
-                }
-            </ul>
+            @if (Model.Posts.Any())
+            {
+                <ul>
+                    @foreach (var post in Model.Posts)
+                    {
+                        <text>
+                            <li class="post-item">
+                                <a href="@post.Url">@post.Title</a>
+                            </li>
+                        </text>
+                    }
+                </ul>
+            }
+            else if (Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                <p>No posts have been found for this blog.</p>
+            }
         </div>
     </text>
 }

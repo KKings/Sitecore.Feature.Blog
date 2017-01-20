@@ -11,6 +11,13 @@ templatekey: Blog
 created: 20170103T203109Z
 
 ----field----
+field: {A0CB3965-8884-4C7A-8815-B6B2E5CED162}
+name: __Editors
+key: __editors
+content-length: 38
+
+{59F53BBB-D1F5-4E38-8EBA-0D73109BB59B}
+----field----
 field: {21F74F6E-42D4-42A2-A4B4-4CEFBCFBD2BB}
 name: __Facets
 key: __facets
@@ -25,12 +32,26 @@ content-length: 155
 
 {BD48D35D-AE82-4269-8E9E-B21A5F17B363}|{702B64D5-58DA-475F-843F-5BDF09A40E36}|{B8B0484C-F1A9-4A18-AFA4-A7B942063D54}|{B05C5F99-615B-46E4-A0F0-FB43E62C404F}
 ----field----
+field: {D312103C-B36C-4CA5-864A-C85F9ABDA503}
+name: __Is Bucket
+key: __is bucket
+content-length: 1
+
+1
+----field----
 field: {AC51462C-8A8D-493B-9492-34D1F26F20F1}
 name: __Default Bucket Query
 key: __default bucket query
 content-length: 54
 
 custom:_templatename|blog post;sort:publish date[desc]
+----field----
+field: {C7815F60-96E1-40CB-BB06-B5F833F73B61}
+name: __Persistent Bucket Filter
+key: __persistent bucket filter
+content-length: 50
+
+custom:_templates|fe7067e67db640a5b13e820e39a7c66e
 ----field----
 field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
 name: __Renderings
@@ -41,7 +62,7 @@ content-length: 1413
 ----version----
 language: en
 version: 1
-revision: 92bf211d-8549-47e5-8c76-399f69338a09
+revision: 5cff579b-4227-4321-b80f-cd080a342a50
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -70,14 +91,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-92bf211d-8549-47e5-8c76-399f69338a09
+5cff579b-4227-4321-b80f-cd080a342a50
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170118T200014Z
+20170119T180146Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

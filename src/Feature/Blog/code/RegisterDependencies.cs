@@ -1,7 +1,6 @@
 ﻿namespace Sitecore.Feature.Blog
 {
     using Caching;
-    using ContentSearch.SearchTypes;
     using Microsoft.Extensions.DependencyInjection;
     using Providers;
     using Repositories;

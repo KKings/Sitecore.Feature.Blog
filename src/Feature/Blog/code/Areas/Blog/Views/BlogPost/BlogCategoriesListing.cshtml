@@ -1,20 +1,27 @@
 ﻿@model Sitecore.Feature.Blog.Areas.Blog.Models.CategoryListingViewModel
 
-@if (Model != null && Model.Categories.Any())
+@if (Model != null)
 {
     <text>
         <div class="widget widget-categories">
             <h2>@Model.Title</h2>
-            <ul>
-                @foreach (var category in Model.Categories)
-                {
-                    <text>
-                        <li class="cat-item cat-@category.Name">
-                            <a href="@category.Url">@category.Name</a>
-                        </li>
-                    </text>
-                }
-            </ul>
+            @if (Model.Categories.Any())
+            {
+                <ul>
+                    @foreach (var category in Model.Categories)
+                    {
+                        <text>
+                            <li class="cat-item cat-@category.Name">
+                                <a href="@category.Url">@category.Name</a>
+                            </li>
+                        </text>
+                    }
+                </ul>
+            }
+            else if (Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                <p>No categories have been found for this blog.</p>
+            }
         </div>
     </text>
 }

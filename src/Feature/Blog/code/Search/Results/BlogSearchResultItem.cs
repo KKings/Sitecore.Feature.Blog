@@ -5,7 +5,6 @@
     using System.ComponentModel;
     using ContentSearch;
     using ContentSearch.Converters;
-    using ContentSearch.SearchTypes;
     using Data;
 
     public class BlogSearchResultItem : SearchResultItem

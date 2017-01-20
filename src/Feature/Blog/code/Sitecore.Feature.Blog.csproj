@@ -214,6 +214,7 @@
     <Compile Include="Extensions\ServiceCollectionExtensions.cs" />
     <Compile Include="Extensions\SitecoreHelperExtensions.cs" />
     <Compile Include="Extensions\TemplateExtensions.cs" />
+    <Compile Include="FieldTypes\BlogMultilistWithSearch.cs" />
     <Compile Include="Items\AuthorItem.cs" />
     <Compile Include="Items\BlogItem.cs" />
     <Compile Include="Items\BlogPostItem.cs" />
@@ -238,6 +239,8 @@
     <Compile Include="Pipelines\BlogLinkProvider\ResolveByContext.cs" />
     <Compile Include="Pipelines\BlogLinkProvider\ResolveByItem.cs" />
     <Compile Include="Pipelines\BlogLinkProvider\BlogLinkProviderArgs.cs" />
+    <Compile Include="Pipelines\BlogLocalDatasource\LocalDatasourceArgs.cs" />
+    <Compile Include="Pipelines\BlogLocalDatasource\ReplaceBlogToken.cs" />
     <Compile Include="Pipelines\BlogUrlResolver\ResolvePermalink.cs" />
     <Compile Include="Pipelines\BlogUrlResolver\BlogUrlResolverArgs.cs" />
     <Compile Include="Pipelines\BlogUrlResolver\MapToBlogContext.cs" />
@@ -278,6 +281,7 @@
     <Compile Include="Search\ComputedFields\BlogArchiveYear.cs" />
     <Compile Include="Search\ComputedFields\BlogAuthorNames.cs" />
     <Compile Include="Search\ComputedFields\BlogTagNames.cs" />
+    <Compile Include="Search\Results\SearchResultItem.cs" />
     <Compile Include="Search\Results\TagSearchResultItem.cs" />
     <Compile Include="Search\SearchQuery.cs" />
     <Compile Include="Search\SearchResults.cs" />

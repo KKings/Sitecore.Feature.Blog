@@ -9,5 +9,10 @@ namespace Sitecore.Feature.Blog.Providers
         /// Context Database
         /// </summary>
         Database Context { get; }
+
+        /// <summary>
+        /// Gets the context content database
+        /// </summary>
+        Database ContentContext { get; }
     }
 }

@@ -2,10 +2,10 @@
 {
     using System;
     using System.Linq.Expressions;
-    using ContentSearch.SearchTypes;
     using Data.Items;
     using Domain;
     using Items;
+    using Search.Results;
 
     public class PostYearToken : IToken
     {

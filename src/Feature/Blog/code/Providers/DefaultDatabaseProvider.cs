@@ -11,11 +11,24 @@
         public virtual string DefaultDatabaseName => "web";
 
         /// <summary>
-        /// Context Database for the Index
+        /// Default Database Name if there is no Context
+        /// </summary>
+        public virtual string DefaultContentDatabaseName => "master";
+
+        /// <summary>
+        /// Context Database
         /// </summary>
         public virtual Database Context
         {
             get { return global::Sitecore.Context.Database ?? this.BaseFactory.GetDatabase(this.DefaultDatabaseName); }
+        }
+
+        /// <summary>
+        /// Context Content Database
+        /// </summary>
+        public virtual Database ContentContext
+        {
+            get { return global::Sitecore.Context.ContentDatabase ?? this.BaseFactory.GetDatabase(this.DefaultContentDatabaseName); }
         }
 
         /// <summary>

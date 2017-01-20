@@ -2,7 +2,7 @@
 {
     using System;
     using System.Linq.Expressions;
-    using ContentSearch.SearchTypes;
+    using Search.Results;
     using Data.Items;
     using Domain;
     using Items;

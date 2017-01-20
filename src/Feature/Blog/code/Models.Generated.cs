@@ -136,38 +136,6 @@ namespace Sitecore.Feature.Blog.Models
 
 	
 	/// <summary>
-	/// BloggerSetting
-	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Blog/Blogger Setting</para>	
-	/// <para>ID: 65ead976-1346-4300-abeb-f2e1e0ac227c</para>	
-	/// </summary>
-	public partial class BloggerSetting 
-	{
-			public const string TemplateIdString = "65ead976-1346-4300-abeb-f2e1e0ac227c";
-			public static readonly ID TemplateId = new ID(TemplateIdString);
-			public const string TemplateName = "Blogger Setting";
-
-			   
-			public const string SettingNameFieldIdRaw = "81819510-efdf-49f3-ae5d-dc58c97ba10f";
-			public static readonly ID SettingNameFieldId = new ID("81819510-efdf-49f3-ae5d-dc58c97ba10f");
-			public const string SettingNameFieldName = "Setting Name";
-			
-			}
-}
-﻿
-
-
-
-
-
-
-
-
-namespace Sitecore.Feature.Blog.Models
-{
-
-	
-	/// <summary>
 	/// BlogAuthor
 	/// <para></para>
 	/// <para>Path: /sitecore/templates/Feature/Blog/Blog Author</para>	
@@ -486,60 +454,6 @@ namespace Sitecore.Feature.Blog.Models
 			public static readonly ID PostsPerPageFieldId = new ID("0735feb1-c8c7-48b0-beb6-9f7f5b5c06f5");
 			public const string PostsPerPageFieldName = "Posts Per Page";
 			
-			}
-}
-﻿
-
-
-
-
-
-
-
-
-namespace Sitecore.Feature.Blog.Models
-{
-
-	
-	/// <summary>
-	/// Blogger
-	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Blog/Blogger</para>	
-	/// <para>ID: cea2caad-1d90-473c-8ffb-e23b93514b2f</para>	
-	/// </summary>
-	public partial class Blogger 
-	{
-			public const string TemplateIdString = "cea2caad-1d90-473c-8ffb-e23b93514b2f";
-			public static readonly ID TemplateId = new ID(TemplateIdString);
-			public const string TemplateName = "Blogger";
-
-			}
-}
-﻿
-
-
-
-
-
-
-
-
-namespace Sitecore.Feature.Blog.Models
-{
-
-	
-	/// <summary>
-	/// BloggerSettings
-	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Blog/Blogger Settings</para>	
-	/// <para>ID: e4eb89ed-1c4d-4dc5-bbda-b9080f5d232c</para>	
-	/// </summary>
-	public partial class BloggerSettings 
-	{
-			public const string TemplateIdString = "e4eb89ed-1c4d-4dc5-bbda-b9080f5d232c";
-			public static readonly ID TemplateId = new ID(TemplateIdString);
-			public const string TemplateName = "Blogger Settings";
-
 			}
 }
 ﻿

@@ -34,7 +34,7 @@
                     .IfWhere(context != null, m => m.Paths.Contains(context.Blog))
                     .Build(),
                 Filters = new ExpressionBuilder<CategorySearchResultItem>()
-                    .Where(result => result.TemplateId == BlogCategory.TemplateId)
+                    .Where(result => result.TemplateIds.Contains(BlogCategory.TemplateId))
                     .Where(result => result.Name != "__Standard Values")
                     .Build(),
                 Sorts = new[]

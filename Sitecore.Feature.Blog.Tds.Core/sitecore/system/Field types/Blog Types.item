@@ -1,26 +1,26 @@
 ----item----
 version: 1
-id: {34AB5D86-1843-43B1-BBA8-76E69D107E0A}
-database: master
-path: /sitecore/templates/Feature/Blog/Blogger/__Standard Values
-parent: {CEA2CAAD-1D90-473C-8FFB-E23B93514B2F}
-name: __Standard Values
-master: {00000000-0000-0000-0000-000000000000}
-template: {CEA2CAAD-1D90-473C-8FFB-E23B93514B2F}
-templatekey: Blogger
-created: 20170105T190120Z
+id: {C5E6347A-2F08-42A2-88E6-8D83C637CCB0}
+database: core
+path: /sitecore/system/Field types/Blog Types
+parent: {76E6D8C7-1F93-4712-872B-DA3C96B808F2}
+name: Blog Types
+master: {30235F43-6242-4107-87AB-5267E34EDF0C}
+template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
+templatekey: Folder
+created: 20170120T171913Z
 
 ----field----
-field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
-name: __Masters
-key: __masters
+field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
+name: __Originator
+key: __originator
 content-length: 38
 
-{E4EB89ED-1C4D-4DC5-BBDA-B9080F5D232C}
+{72E4178E-14EA-4A0D-927B-A62052E80C2C}
 ----version----
 language: en
 version: 1
-revision: c661e735-4343-4fab-915e-fecf859e01b3
+revision: 1a4d944c-111d-4794-9513-a7c2a2d115a9
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -35,21 +35,28 @@ name: __Created
 key: __created
 content-length: 16
 
-20170105T190121Z
+20170120T171913Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-c661e735-4343-4fab-915e-fecf859e01b3
+1a4d944c-111d-4794-9513-a7c2a2d115a9
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170105T190344Z
+20170120T171913Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
