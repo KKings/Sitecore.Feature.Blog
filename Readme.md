@@ -1,4 +1,6 @@
-﻿## Blogging Accelerator
+[![NuGet version](https://badge.fury.io/nu/Sitecore.Feature.Blog.svg)](https://badge.fury.io/nu/Sitecore.Feature.Blog)
+
+## Blogging Accelerator
 
 The minimal, but highly customizable blogging accelerator that provides simple blogging functionality, based on the helix 
 design principles. This accelerator allows teams to easily add blogging capabilities for clients without having to build things
