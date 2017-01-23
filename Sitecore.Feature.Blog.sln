@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Feature.Blog.Tests
 EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Sitecore.Feature.Blog.Tds.Master", "src\Feature\Blog\tds\Sitecore.Feature.Blog.Tds.Master\Sitecore.Feature.Blog.Tds.Master.scproj", "{18B7C86F-8A53-41E0-A6DC-9C257AC047B2}"
 EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Sitecore.Feature.Blog.Tds.Core", "Sitecore.Feature.Blog.Tds.Core\Sitecore.Feature.Blog.Tds.Core.scproj", "{BF15C521-F945-4227-9C34-480600B2C87D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,12 @@ Global
 		{18B7C86F-8A53-41E0-A6DC-9C257AC047B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18B7C86F-8A53-41E0-A6DC-9C257AC047B2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{18B7C86F-8A53-41E0-A6DC-9C257AC047B2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BF15C521-F945-4227-9C34-480600B2C87D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF15C521-F945-4227-9C34-480600B2C87D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF15C521-F945-4227-9C34-480600B2C87D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BF15C521-F945-4227-9C34-480600B2C87D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF15C521-F945-4227-9C34-480600B2C87D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF15C521-F945-4227-9C34-480600B2C87D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,5 +60,6 @@ Global
 		{BB0D601D-20F7-4E34-B897-414079288E3D} = {DD3A0BE4-F486-4B78-9E72-D2C4CB647B6C}
 		{ACEBE353-C2D0-4CBE-A18B-C65C3528BEAD} = {DD3A0BE4-F486-4B78-9E72-D2C4CB647B6C}
 		{18B7C86F-8A53-41E0-A6DC-9C257AC047B2} = {DD3A0BE4-F486-4B78-9E72-D2C4CB647B6C}
+		{BF15C521-F945-4227-9C34-480600B2C87D} = {DD3A0BE4-F486-4B78-9E72-D2C4CB647B6C}
 	EndGlobalSection
 EndGlobal

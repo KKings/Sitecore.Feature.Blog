@@ -10,7 +10,7 @@
     public class BlogMultilistWithSearch : BucketList
     {
         /// <summary>
-        /// 
+        /// Gets the base pipeline runner
         /// </summary>
         protected virtual BaseCorePipelineManager Pipeline {
             get { return ServiceLocator.ServiceProvider.GetService<BaseCorePipelineManager>(); } }
