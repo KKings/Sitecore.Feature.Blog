@@ -69,7 +69,19 @@
         /// <summary>
         /// Renders the Related Post Listing Rendering
         /// </summary>
-        public virtual ActionResult RelatedPostListing()
+        public virtual ActionResult BlogRelatedPostListing()
+        {
+            var relatedItem = (BlogRelatedItem)Mvc.Presentation.RenderingContext.Current.ContextItem;
+            var title = this.renderingService.GetTitle(Mvc.Presentation.RenderingContext.CurrentOrNull);
+
+            var viewModel = new RelatedPostListingViewModel(title, relatedItem?.RelatedPostItems);
+            return this.View(viewModel);
+        }
+
+        /// <summary>
+        /// Renders the Dynamic Related Post Listing Rendering
+        /// </summary>
+        public virtual ActionResult BlogDynamicRelatedPostListing()
         {
             var blogPost = (BlogPostItem)Mvc.Presentation.RenderingContext.Current.ContextItem;
             var title = this.renderingService.GetTitle(Mvc.Presentation.RenderingContext.CurrentOrNull);

@@ -1,0 +1,28 @@
+﻿@model Sitecore.Feature.Blog.Areas.Blog.Models.RelatedPostListingViewModel
+    
+@if (Model != null && Model.Posts.Any())
+{
+    <text>
+        <div class="related-posts">
+            <h3 class="related-posts-title">@Model.Title</h3>
+            <div class="related-posts-items">
+                @foreach (var post in Model.Posts)
+                {
+                    <text>
+                        <div class="related-post-item">
+                            @if (post.Thumbnail != null)
+                            {
+                                <a class="post-thumbnail" href="@post.Url">
+                                    <img src="@post.Thumbnail.Src" />
+                                </a>
+                            }
+                            <p class="post-title">
+                                <a href="@post.Url">@post.Title</a>
+                            </p>
+                        </div> 
+                    </text>
+                }
+            </div>
+        </div>
+    </text>
+}

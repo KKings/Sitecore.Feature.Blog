@@ -40,6 +40,38 @@ namespace Sitecore.Feature.Blog.Models
 
 	
 	/// <summary>
+	/// BlogRelatedListing
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Feature/Blog/_Blog Related Listing</para>	
+	/// <para>ID: 0607865c-c480-4837-a6f0-02e23c74c815</para>	
+	/// </summary>
+	public partial class BlogRelatedListing 
+	{
+			public const string TemplateIdString = "0607865c-c480-4837-a6f0-02e23c74c815";
+			public static readonly ID TemplateId = new ID(TemplateIdString);
+			public const string TemplateName = "_Blog Related Listing";
+
+			   
+			public const string RelatedBlogPostsFieldIdRaw = "324f8f13-0706-4538-89b6-71687d5f31d2";
+			public static readonly ID RelatedBlogPostsFieldId = new ID("324f8f13-0706-4538-89b6-71687d5f31d2");
+			public const string RelatedBlogPostsFieldName = "Related Blog Posts";
+			
+			}
+}
+﻿
+
+
+
+
+
+
+
+
+namespace Sitecore.Feature.Blog.Models
+{
+
+	
+	/// <summary>
 	/// TitleParameters
 	/// <para></para>
 	/// <para>Path: /sitecore/templates/Feature/Blog/Title Parameters</para>	

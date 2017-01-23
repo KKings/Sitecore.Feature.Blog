@@ -1,14 +1,14 @@
 ----item----
 version: 1
-id: {75574306-48F0-4F46-B3D2-FBD192701BC5}
+id: {3529D790-603A-48FE-979E-691F77E22100}
 database: master
-path: /sitecore/layout/Renderings/Feature/Blog/Related Posts
+path: /sitecore/layout/Renderings/Feature/Blog/Related Posts - Dynamic
 parent: {831B25AD-0C2C-4778-9447-08F8A0CFDD77}
-name: Related Posts
+name: Related Posts - Dynamic
 master: {00000000-0000-0000-0000-000000000000}
 template: {2A3E91A0-7987-44B5-AB34-35C2D9DE83B9}
 templatekey: Controller rendering
-created: 20170123T154220Z
+created: 20170106T190620Z
 
 ----field----
 field: {E64AD073-DFCC-4D20-8C0B-FE5AA6226CD7}
@@ -21,9 +21,9 @@ Sitecore.Feature.Blog.Areas.Blog.Controllers.BlogPostController, Sitecore.Featur
 field: {DED9E431-3604-4921-A4B3-A6EC7636A5B6}
 name: Controller Action
 key: controller action
-content-length: 22
+content-length: 29
 
-BlogRelatedPostListing
+BlogDynamicRelatedPostListing
 ----field----
 field: {FC5C3451-DFDE-4778-9901-5D0B1DA1E212}
 name: Area
@@ -55,7 +55,7 @@ content-length: 1
 ----version----
 language: en
 version: 1
-revision: f8b16438-42dd-4044-bbf0-a429cd9e0c34
+revision: 1dcf347e-a319-4a61-bcb7-2c4b632d9674
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -84,14 +84,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f8b16438-42dd-4044-bbf0-a429cd9e0c34
+1dcf347e-a319-4a61-bcb7-2c4b632d9674
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170123T154317Z
+20170123T154150Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
