@@ -35,7 +35,9 @@ A Sitecore installation package is provided for installing the blog module into 
 
 To extend the blog module, use NuGet to install the Sitecore.Feature.Blog package as a DevDependency:
 
-> TBD Package
+Run the following command within the Package Manager Console.
+
+> Install-Package Sitecore.Feature.Blog
 
 
 After installation of the package within an environment, to create a blogging area, simply create an item that is derived from the 'Blog' template. All categories, authors, and tags will be managed in a simple Sitecore Item Bucket. 
