@@ -25,14 +25,13 @@ from scratch.
 * Related Posts - Dynamic
 * Tag Cloud
 * Tag Lisitng
-
 * _Sample Layout_ this is an example layout, not meant to be used in production
 
 ### Getting Started
 
 A Sitecore installation package is provided for installing the blog module into your Sitecore environment.
 
-> TBD Installation Process
+> Head over to the release section to the download the latest release, https://github.com/KKings/Sitecore.Feature.Blog/releases. From there use Sitecore's package Installation Wizard to install the package.
 
 To extend the blog module, use NuGet to install the Sitecore.Feature.Blog package as a DevDependency:
 
