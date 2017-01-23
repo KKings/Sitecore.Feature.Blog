@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Feature.Blog.Tests
 EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Sitecore.Feature.Blog.Tds.Master", "src\Feature\Blog\tds\Sitecore.Feature.Blog.Tds.Master\Sitecore.Feature.Blog.Tds.Master.scproj", "{18B7C86F-8A53-41E0-A6DC-9C257AC047B2}"
 EndProject
-Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Sitecore.Feature.Blog.Tds.Core", "Sitecore.Feature.Blog.Tds.Core\Sitecore.Feature.Blog.Tds.Core.scproj", "{BF15C521-F945-4227-9C34-480600B2C87D}"
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Sitecore.Feature.Blog.Tds.Core", "src\Feature\Blog\tds\Sitecore.Feature.Blog.Tds.Core\Sitecore.Feature.Blog.Tds.Core.scproj", "{BF15C521-F945-4227-9C34-480600B2C87D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
