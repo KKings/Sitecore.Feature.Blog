@@ -226,8 +226,8 @@
     <Compile Include="Items\TagItem.cs" />
     <Compile Include="Links\LinkPipelineProvider.cs" />
     <Compile Include="Models.Generated.cs" />
-    <Compile Include="Pipelines\BlogAbstractUrlResolver\AbstractUrlMappingResolver.cs" />
-    <Compile Include="Pipelines\BlogAbstractUrlResolver\BlogAbstractUrlResolverArgs.cs" />
+    <Compile Include="Pipelines\BlogAbstractLinkProvider\BlogAbstractUrlMapper.cs" />
+    <Compile Include="Pipelines\BlogAbstractLinkProvider\BlogAbstractLinkMapperArgs.cs" />
     <Compile Include="Pipelines\BlogContextResolver\BlogContextArgs.cs" />
     <Compile Include="Pipelines\BlogContextResolver\ResolveBlogInEditor.cs" />
     <Compile Include="Pipelines\BlogContextResolver\ResolveContextItem.cs" />

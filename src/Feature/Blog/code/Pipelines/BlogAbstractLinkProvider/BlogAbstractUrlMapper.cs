@@ -19,19 +19,20 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-namespace Sitecore.Feature.Blog.Pipelines.BlogAbstractUrlResolver
+namespace Sitecore.Feature.Blog.Pipelines.BlogAbstractLinkProvider
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using BlogAbstractUrlResolver;
     using Data;
     using DependencyInjection;
-    using global::Sitecore.Links;
     using Microsoft.Extensions.DependencyInjection;
     using Providers;
     using Repositories;
+    using Sitecore.Links;
 
-    public class AbstractUrlMappingResolver
+    public class BlogAbstractUrlMapper
     {
         /// <summary>
         /// Gets the Blog Context Repository
@@ -48,7 +49,7 @@ namespace Sitecore.Feature.Blog.Pipelines.BlogAbstractUrlResolver
         /// </summary>
         public List<string> Permalinks { get; set; } = new List<string>();
 
-        public void Process(BlogAbstractUrlResolverArgs args)
+        public void Process(BlogAbstractLinkMapperArgs args)
         {
             if (!this.Permalinks.Any() || !args.Properties.Any())
             {

@@ -62,9 +62,9 @@ namespace Sitecore.Feature.Blog.Resolvers
         public virtual string GetAbstractUrl(IDictionary<string, object> properties)
         {
             // Null here indincates that default options will be used
-            var args = new BlogAbstractUrlResolverArgs(properties, null);
+            var args = new BlogAbstractLinkMapperArgs(properties, null);
 
-            CorePipeline.Run("blog.resolveAbstractUrl", args);
+            CorePipeline.Run("blog.generateAbstractUrl", args);
 
             return args.IsResolved ? args.Url : String.Empty;
         }

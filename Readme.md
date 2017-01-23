@@ -1,6 +1,32 @@
-﻿## Sitecore.Feature.Blog
+﻿## Blogging Accelerator
 
-The Sitecore.Feature.Blog library is an accelerator that provides blogging functionality, based on the helix design principles.
+The minimal, but highly customizable blogging accelerator that provides simple blogging functionality, based on the helix 
+design principles. This accelerator allows teams to easily add blogging capabilities for clients without having to build things
+from scratch.
+
+
+### Features
+
+* Define url patterns (permalinks) within configuration to resolve blog items within buckets
+* Easily extend blog templates (blog, author, tags, categories) to maintain an upgrade path, but most importantly to bring your own presentation layer
+* Self-contained blogging capabilities, the accelerator does not make assumptions about the content tree
+* Service/Repository driven design
+
+#### Includes the following Renderings
+
+* Archive Listing
+* Blog Listing (Main Blog Listing component)
+* Blog Page Header
+* Blog Post Detail
+* Category Listing
+* Open Graph Metadata
+* Recent Posts Listing
+* Related Posts
+* Related Posts - Dynamic
+* Tag Cloud
+* Tag Lisitng
+
+* _Sample Layout_ this is an example layout, not meant to be used in production
 
 ### Getting Started
 
@@ -17,7 +43,7 @@ After installation of the package within an environment, to create a blogging ar
 
 ### Resolving URLs
 
-The blogging module uses custom routing through the use of tokens and resolvers that give the ability to generate any type of URL based on information stored within the bucket.
+The blogging accelerator uses custom routing through the use of tokens and resolvers that give the ability to generate any type of URL based on information stored within the bucket. The accelerator will manage all routes underneath a blog template (or inherited template).
 
 #### Tokens
 
@@ -141,3 +167,42 @@ Out of the box, the blogging module comes with two resolvers:
     <blog>
   <sitecore>
 </configuration>
+```
+
+
+#### Custom Pipelines
+
+##### blog.generateAbstractUrl
+
+The blog.generateAbstractUrl generates URLs for items not found within Sitecore. Currently uses while generating archive links.
+
+The main processor, _BlogAbstractUrlMapper_ is passed a collection of tags (or tokens) and and values of the tags, then resolves 
+against configured permalinks where all tags (or tokens) are resolved.
+
+
+##### blog.resolveUrl
+
+The blog.resolveUrl pipeline resolves URLs using the Resolvers and Tokens to determine if a resolver can handle the URL and 
+how to map it to current request (BlogContext and Item).
+
+
+##### blog.resolveContext
+
+The blog.resolveContext pipeline resolves the BlogContext of the current request, mapping all values found from the URL into the Blog Context.
+
+
+##### blog.linkProvider
+
+The blog.linkProvider pipeline is used in conjunction with the Link Provider to provide a pipeline based
+Link Provider. Processors generate the URLs based on a corresponding resolver that is mapped to a specific template
+type.
+
+##### blog.localDatasource
+
+The blog.localDatasource pipeline is used to untokenize a string. Example, this pipeline is called within the Blog Multilist with Search
+field to limit the current items by the parent blog.
+
+##### blog.generateSlug
+
+The blog.generateSlug pipeline is used to generate the 'slug' of any item that is derived from the __Slug_ template. The slug is used in 
+URL resolution to find a specific item based on that slug.

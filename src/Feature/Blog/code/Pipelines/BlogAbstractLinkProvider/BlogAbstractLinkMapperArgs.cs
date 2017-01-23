@@ -26,7 +26,7 @@ namespace Sitecore.Feature.Blog.Pipelines.BlogAbstractUrlResolver
     using global::Sitecore.Links;
     using global::Sitecore.Pipelines;
 
-    public class BlogAbstractUrlResolverArgs : PipelineArgs
+    public class BlogAbstractLinkMapperArgs : PipelineArgs
     {
         /// <summary>
         /// Gets or sets the Url
@@ -48,7 +48,7 @@ namespace Sitecore.Feature.Blog.Pipelines.BlogAbstractUrlResolver
         /// </summary>
         public UrlOptions Options { get; private set; }
 
-        public BlogAbstractUrlResolverArgs(IDictionary<string, object> properties, UrlOptions options)
+        public BlogAbstractLinkMapperArgs(IDictionary<string, object> properties, UrlOptions options)
         {
             this.Properties = properties;
             this.Options = options ?? UrlOptions.DefaultOptions;
